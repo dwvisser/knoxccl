@@ -1,0 +1,67 @@
+/* Color pallete: http://www.colourlovers.com/palette/1827183/Lights */
+
+
+/* Override Bootstrap Styles
+------------------------------------------------- */
+
+.col-md-12 {
+    float: none;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.jumbotron {
+    background-color: rgb(67,106,87);
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Styles
+------------------------------------------------- */
+
+a {
+    color: rgb(206,206,108);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(221,234,165);
+}
+
+a:visited {
+    color: rgb(186,191,133);
+}
+
+dl, li, p {
+    font-size: 1.2em;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+.banner-link {
+    color: white;
+    text-decoration: none;
+}
+
+.year {
+    background-color: rgb(129,137,100);
+    color: white;
+    letter-spacing: 1px;
+    padding: 6px;
+    /*margin-top: 0;*/
+}
+
+.mirror-jumbotron {
+    background-color: rgb(67,106,87);
+}
+
+#footer {
+    color: white;
+    display: inline-block;
+    font-size: small;
+    height: 38px;
+    line-height: 45px;
+    vertical-align: middle;
+}
