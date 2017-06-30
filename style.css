@@ -32,6 +32,14 @@ a:visited {
     color: rgb(186,191,133);
 }
 
+.jumbotron a:visited {
+    color:white;
+}
+
+.jumbotron a:hover {
+    color: rgb(221,234,165);
+}
+
 dl, li, p {
     font-size: 1.2em;
 }
@@ -55,6 +63,14 @@ h1, h2, h3, h4 {
 
 .mirror-jumbotron {
     background-color: rgb(67,106,87);
+}
+
+.mirror-jumbotron a {
+    color:white;
+}
+
+.mirror-jumbotron a:visited {
+    color: white;
 }
 
 #footer {
