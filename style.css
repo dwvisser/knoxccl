@@ -10,8 +10,14 @@
     max-width: 700px;
 }
 
+/* Image source: http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
+*/
+
 .jumbotron {
     background-color: rgb(67,106,87);
+    background-image: url("smoky-mountains-1379552973wwG.jpg");
+    background-position: bottom center;
+    background-size: cover;
     color: white;
     letter-spacing: 1px;
 }
