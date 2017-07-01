@@ -22,6 +22,10 @@
     letter-spacing: 1px;
 }
 
+.jumbotron img {
+    height: 1em;
+}
+
 /* Styles
 ------------------------------------------------- */
 
