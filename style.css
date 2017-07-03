@@ -38,8 +38,13 @@ a:hover {
     color: rgb(221,234,165);
 }
 
+
 a:visited {
     color: rgb(186,191,133);
+}
+
+.jumbotron a {
+    padding-right: 0.7em;
 }
 
 .jumbotron a:visited {
