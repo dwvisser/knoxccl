@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Greater Knoxville Citizens' Climate Lobby</title>
+</head>
 
+<body>
+
+<noscript id="deferred-styles">
   <!-- Bootstrap http://getbootstrap.com -->
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,9 +20,7 @@
 
   <!-- My styles -->
   <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+</noscript>
 
 <div class="jumbotron">
   <div class="container">
@@ -111,6 +113,18 @@
       </p>
     </div>  <!-- end Bootstrap row -->
 </footer>   <!-- end footer Bootstrap container -->
-
+<script>
+  var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);
+</script>
 </body>
 </html>
