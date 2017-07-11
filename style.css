@@ -15,7 +15,11 @@
 
 .jumbotron {
     background-color: rgb(67,106,87);
-    background-image: url("smoky-mountains-1379552973wwG.jpg");
+    background-image: url("images/low_smoky-mountains-1379552973wwG.jpg");
+    background-image: image-set(
+        url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+        url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+    );
     background-position: bottom center;
     background-size: cover;
     color: white;
