@@ -66,6 +66,19 @@ h1, h2, h3, h4 {
     text-decoration: none;
 }
 
+.ui-widget-header {
+    background-color: rgb(129,137,100);
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: none;
+    border-color: rgb(221,234,165);
+}
+
+.ui-state-active a {
+    background-color: rgb(186,191,133);
+}
+
 section h2 {
     background-color: rgb(129,137,100);
     color: white;

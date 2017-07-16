@@ -5,6 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Greater Knoxville Citizens' Climate Lobby</title>
+  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
 </head>
 
 <body>
@@ -17,6 +24,8 @@
   <!-- Font Awesome https://fortawesome.github.io/Font-Awesome/ -->
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
 
   <!-- My styles -->
   <link rel="stylesheet" href="style.css">
@@ -62,9 +71,13 @@
 </div>  <!-- end .jumbotron -->
 
 <div class="container main-content">
-    <section class="row col-md-12">
-      
-      <h2>About Our Chapter</h2>
+      <div id="tabs" class="row col-md-12">
+        <ul>
+          <li><a href="#about-us-tab">About Us</a></li>
+          <li><a href="#about-ccl-tab">About CCL</a></li>
+          <li><a href="#newsletters-tab">Newsletters</a></li>
+        </ul>
+        <section id="about-us-tab">
 
       <p>We are a new chapter of the Citizens' Climate Lobby established to
         focus on the impacts of climate change on the Greater Knoxville
@@ -79,8 +92,7 @@
         are younger or older; <em>all</em> are welcome to the Greater
         Knoxville Citizens' Climate Lobby meetings.</p>
     </section>
-    <section class="row col-md-12">
-      <h2>About Citizens' Climate Lobby</h2>
+    <section id="about-ccl-tab" class="row col-md-12">
 
       <p>Citizens’ Climate Lobby is a nonprofit, nonpartisan, grassroots
         advocacy organization empowering people to experience breakthroughs
@@ -102,6 +114,9 @@
       <p>We’ve seen firsthand how passionate citizens who are well-trained,
         organized by district and with a good system of support can more than
         influence the political process.</p>
+  </section>
+  <section id="newsletters-tab" class="row col-md-12">
+    <p>Under Construction!</p>
   </section>
 </div>  <!-- end .main-content Bootstrap container -->
 
