@@ -27,8 +27,8 @@
 /* Styles
 ------------------------------------------------- */
 
-a {
-    color: rgb(206,206,108);
+.ui-widget-content a {
+    color: rgb(67,106,87);
     font-weight: bold;
 }
 
@@ -38,7 +38,7 @@ a:hover {
 
 
 a:visited {
-    color: rgb(186,191,133);
+    color: rgb(129,137,100);
 }
 
 .jumbotron a {
