@@ -27,7 +27,7 @@
 /* Styles
 ------------------------------------------------- */
 
-.ui-widget-content a {
+#main-content section a {
     color: rgb(67,106,87);
     font-weight: bold;
 }
@@ -61,21 +61,25 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
-.banner-link {
+#banner-links a {
     color: white;
     text-decoration: none;
 }
 
-.ui-widget-header {
+#tabs-list {
     background-color: rgb(129,137,100);
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+#tabs-list li {
+    font-weight: bold;
+}
+
+#tabs-list li.ui-state-active {
     background: none;
     border-color: rgb(221,234,165);
 }
 
-.ui-state-active a {
+#tabs-list li.ui-state-active a {
     background-color: rgb(186,191,133);
 }
 
@@ -98,7 +102,7 @@ section h2 {
     color: white;
 }
 
-.main-content {
+#main-content {
     padding-bottom: 1em;
 }
 
