@@ -1,17 +1,45 @@
 /* Color pallete: http://www.colourlovers.com/palette/1827183/Lights */
 
+/* For my own learning, I'm organizing this CSS from lowest priority to
+   highest. ID rules get highest. # of classes/pseudo-classes specified
+   determines ordering after that, and # of elements specified is the final
+   determiner of order. */
 
-/* Override Bootstrap Styles
-------------------------------------------------- */
+/* Lowest priority: elements */
 
-.col-md-12 {
+dl, li, p {
+    font-size: 1.2em;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+footer p { /* 2 elements bump priority over one element */
+    color: white;
+    display: inline-block;
+    font-size: small;
+    height: 38px;
+    line-height: 45px;
+    vertical-align: middle;
+}
+
+section h2 {
+    background-color: rgb(129,137,100);
+    color: white;
+    letter-spacing: 1px;
+    padding: 6px;
+}
+
+/* Next lowest priority: classes  and pseudo-classes */
+
+.col-md-12 { /* From Bootstrap */
     float: none;
     margin: 0 auto;
     max-width: 700px;
 }
 
-.jumbotron {
-    background-color: rgb(67,106,87);
+.jumbotron { /* From Bootstrap */
     /* Image source: http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg */
     background-image: url("images/low_smoky-mountains-1379552973wwG.jpg");
     background-image: image-set(
@@ -24,93 +52,62 @@
     letter-spacing: 1px;
 }
 
-/* Styles
-------------------------------------------------- */
-
-#main-content section a {
-    color: rgb(67,106,87);
-    font-weight: bold;
+.top-and-bottom {
+    background-color: rgb(67,106,87);
 }
 
-a:hover {
+a:hover { /* class or pseudo-class + element */
     color: rgb(221,234,165);
 }
 
-
 a:visited {
     color: rgb(129,137,100);
+}
+
+.top-and-bottom a {
+    color:white;
 }
 
 .jumbotron a {
     padding-right: 0.7em;
 }
 
-.jumbotron a:visited {
+.top-and-bottom a:visited { /* 2 class/pseudoclass + element */
     color:white;
 }
 
-.jumbotron a:hover {
-    color: rgb(221,234,165);
-}
-
-dl, li, p {
-    font-size: 1.2em;
-}
-
-h1, h2, h3, h4 {
-    font-weight: 400;
-}
-
-#banner-links a {
-    color: white;
-    text-decoration: none;
-}
+/* Hightest priority: id's */
 
 #tabs-list {
     background-color: rgb(129,137,100);
-}
-
-#tabs-list li {
-    font-weight: bold;
-}
-
-#tabs-list li.ui-state-active {
-    background: none;
-    border-color: rgb(221,234,165);
-}
-
-#tabs-list li.ui-state-active a {
-    background-color: rgb(186,191,133);
-}
-
-section h2 {
-    background-color: rgb(129,137,100);
-    color: white;
-    letter-spacing: 1px;
-    padding: 6px;
-}
-
-.mirror-jumbotron {
-    background-color: rgb(67,106,87);
-}
-
-.mirror-jumbotron a {
-    color:white;
-}
-
-.mirror-jumbotron a:visited {
-    color: white;
 }
 
 #main-content {
     padding-bottom: 1em;
 }
 
-footer.mirror-jumbotron p {
-    color: white;
-    display: inline-block;
-    font-size: small;
-    height: 38px;
-    line-height: 45px;
-    vertical-align: middle;
+#banner-links a { /* id + element */
+    text-decoration: none;
+}
+
+#tabs-list li {
+    font-weight: bold;
+}
+
+#tabs-list li.ui-state-active { /* id + element + class */
+    background: none;
+    border-color: rgb(221,234,165);
+}
+
+#banner-links a:hover {
+    color: rgb(221,234,165);
+}
+
+#main-content section a { /* id + 2 elements */
+    color: rgb(67,106,87);
+    font-weight: bold;
+}
+
+#tabs-list li.ui-state-active a { /* id + 2 elements + class */
+    background-color: rgb(186,191,133);
 }
