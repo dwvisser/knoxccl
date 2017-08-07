@@ -33,6 +33,15 @@ section h2 {
 
 /* Next lowest priority: classes  and pseudo-classes */
 
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
 .col-md-12 { /* From Bootstrap */
     float: none;
     margin: 0 auto;

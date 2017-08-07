@@ -11,21 +11,20 @@
   <meta property="og:image" content="https://knoxccl.org/images/thumbnail.jpg" />
   <meta property="og:description" content="We are a new chapter of the Citizens' Climate Lobby established to focus on the impacts of climate change on the Greater Knoxville region." />
   <title>Greater Knoxville Citizens' Climate Lobby</title>
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
   <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.magnific-popup.js"></script>
   <script>
   $( function() {
     $( "#tabs" ).tabs();
-    $('#latest-news').dialog({
-      show: {
-        effect: 'slide',
-        duration: 1000
-      },
-      position: {
-        my: 'top',
-        at: 'top',
-        of: '#main-content'
-      }
+    $.magnificPopup.open({
+        items: {
+          src: '<div class="white-popup">Our training workshop is August ' +
+            '12th! See the Meetings tab for details and to RSVP.</div>',
+          type: 'inline'
+        },
+        closeBtnInside: true
     });
   } );
   </script>
@@ -88,19 +87,16 @@
   </div> <!-- end Bootstrap container -->
 </div>  <!-- end .jumbotron -->
 
-<div id="latest-news" title="Climate Advocates!">
-  <p>Our training workshop is August 12th! See the Meetings tab for details and to RSVP.</p>
-</div>
-
 <div id="main-content" class="container">
-      <div id="tabs" class="row col-md-12">
-        <ul id="tabs-list">
-          <li><a href="#about-us-tab">About Us</a></li>
-          <li><a href="#about-ccl-tab">About CCL</a></li>
-          <li><a href="#meetings-tab">Meetings</a></li>
-          <li><a href="#newsletters-tab">Newsletters</a></li>
-        </ul>
-        <section id="about-us-tab">
+  <div id="tabs" class="row col-md-12">
+    <ul id="tabs-list">
+      <li><a href="#about-us-tab">About Us</a></li>
+      <li><a href="#about-ccl-tab">About CCL</a></li>
+      <li><a href="#meetings-tab">Meetings</a></li>
+      <li><a href="#newsletters-tab">Newsletters</a></li>
+    </ul>
+
+    <section id="about-us-tab">
 
       <p>We are a new chapter of the Citizens' Climate Lobby established to
         focus on the impacts of climate change on the Greater Knoxville
