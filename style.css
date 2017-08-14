@@ -87,12 +87,24 @@ a:visited {
 
 /* Hightest priority: id's */
 
+#announcement {
+    background-color: yellow;
+    border-color: goldenrod;
+    border-width: 3px;
+    border-style: solid;
+    margin-bottom: 1em;
+}
+
 #tabs-list {
     background-color: rgb(129,137,100);
 }
 
 #main-content {
     padding-bottom: 1em;
+}
+
+#announcement button {
+    background-color: goldenrod;
 }
 
 #banner-links a { /* id + element */

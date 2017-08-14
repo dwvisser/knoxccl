@@ -14,19 +14,13 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
   <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
-  <script src="scripts/jquery.magnific-popup.js"></script>
   <script>
-  $( function() {
-    $( "#tabs" ).tabs();
-    $.magnificPopup.open({
-        items: {
-          src: '<div class="white-popup">Our training workshop is August ' +
-            '12th! See the Meetings tab for details, a local map, and to RSVP.</div>',
-          type: 'inline'
-        },
-        closeBtnInside: true
-    });
-  } );
+      $( function() {
+        $( "#tabs" ).tabs();
+        $('#announcement button').on('click', function(){
+          $(this).parent().parent().hide();
+        })
+      });
   </script>
 </head>
 
@@ -87,6 +81,14 @@
   </div> <!-- end Bootstrap container -->
 </div>  <!-- end .jumbotron -->
 
+<div class="container">
+  <div id="announcement" class="row col-md-12">
+      <span class="col-sm"><button class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
+      <span class="col-xl">Our next meeting is on September 18th at Bearden Public Library. See the
+    meetings tab for details.</span>
+  </div>
+</div>
+
 <div id="main-content" class="container">
   <div id="tabs" class="row col-md-12">
     <ul id="tabs-list">
@@ -135,8 +137,18 @@
         influence the political process.</p>
   </section>
   <section id="meetings-tab" class="row col-md-12">
-    <h2>Climate Advocate Training Workshop</h2>
-    <h3>August 12, 2017</h3>
+    <h2>September 2017 Monthly Meeting</h2>
+    <h3>September 18, 2017</h3>
+
+    <p>The Greater Knoxville Chapter of the Citizens’ Climate Lobby September
+      meeting will be held on Monday, September 18, 6:30 – 7:45 p. m.  at the
+      <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public Library, 100
+        Golfclub Rd, Knoxville TN</a>. Agenda will be in the September
+        Newsletter.</p>
+
+    <h2>Past Meetings</h2>
+    <h3>Climate Advocate Training Workshop</h3>
+    <h4>August 12, 2017</h4>
 
     <p><a href="https://www.eventbrite.com/e/knoxville-tn-climate-advocate-training-workshop-tickets-36367398869">RSVP at EventBrite</a>. All you need is an e-mail
     address.</p>
@@ -161,15 +173,6 @@
         device, or print in advance to help you find your way
       once on campus</b>: <a href="files/MapUTKInstituteOfAgriculture.pdf">[UTK
       Institutue of Agriculture Map]</a></p>
-
-    <h2>September 2017 Monthly Meeting</h2>
-    <h3>September 18, 2017</h3>
-
-    <p>The Greater Knoxville Chapter of the Citizens’ Climate Lobby September
-      meeting will be held on Monday, September 18, 6:30 – 7:45 p. m.  at the
-      <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public Library, 100
-        Golfclub Rd, Knoxville TN</a>. Agenda will be in the September
-        Newsletter.</p>
 
   </section>
   <section id="newsletters-tab" class="row col-md-12">
