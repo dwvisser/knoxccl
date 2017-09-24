@@ -15,13 +15,17 @@
   <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
   <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
   <script>
-      $( function() {
-        $( "#tabs" ).tabs();
-        // $('#announcement button').on('click', function(){
-        //   $(this).parent().parent().hide();
-        // })
+    $( function() {
+      $( "#tabs" ).tabs();
+      $('#announcement button').on('click', function(){
+        $(this).parent().parent().hide();
+      })
+      $('#2017-10').load('newsletters/2017-10.html');
+      $('.switch-3').on('click', function(){
+        $('#tabs').tabs({active: 3});
       });
-  </script>
+    });
+</script>
 </head>
 
 <body>
@@ -81,13 +85,14 @@
   </div> <!-- end Bootstrap container -->
 </div>  <!-- end .jumbotron -->
 
-<!-- <div class="container">
+<div class="container">
   <div id="announcement" class="row col-md-12">
       <span class="col-sm"><button class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
-      <span class="col-xl">Our next meeting is on September 18th at Bearden Public Library. See the
-    meetings tab for details. <em>Agenda now available.</em></span>
+      <span class="col-xl">The <a class="switch-3" href="#2017-10">October
+        newsletter</a> is released. Our next meeting will be on October 16th
+        at Bearden Public Library. See the newsletter for details.</span>
   </div>
-</div> -->
+</div>
 
 <div id="main-content" class="container">
   <div id="tabs" class="row col-md-12">
@@ -143,15 +148,8 @@
     <p>The Greater Knoxville Chapter of the Citizens’ Climate Lobby September
       meeting will be held on Monday, September 18, 6:30 – 7:45 p. m.  at the
       <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public Library, 100
-        Golfclub Rd, Knoxville TN</a>. The agenda us in the <a class="switch-3" href="#2017-09-meeting">September
-        Newsletter</a>.</p>
-    <script>
-      $(function() {
-        $('.switch-3').on('click', function(){
-          $('#tabs').tabs({active: 3});
-        });
-      });
-    </script>
+        Golfclub Rd, Knoxville TN</a>. The agenda is in the <a
+        class="switch-3" href="#2017-09-meeting">September Newsletter</a>.</p>>
     <h2>Past Meetings</h2>
     <h3>Climate Advocate Training Workshop</h3>
     <h4>August 12, 2017</h4>
@@ -182,6 +180,7 @@
 
   </section>
   <section id="newsletters-tab" class="row col-md-12">
+    <div id="2017-10"></div>
     <h2>August 28, 2017</h2>
       
       <h3>August Reports</h3>
