@@ -21,8 +21,11 @@
         $(this).parent().parent().hide();
       })
       $('#2017-10').load('newsletters/2017-10.html');
-      $('.switch-3').on('click', function(){
-        $('#tabs').tabs({active: 3});
+      $('body').on('click', '.switch', function(){
+        var match = $(this).attr('class').match(/to-tab-(\d)/);
+        if (match !== null && match.length > 1) {
+          $('#tabs').tabs( {active: Number(match[1])});
+        }
       });
     });
 </script>
@@ -88,9 +91,10 @@
 <div class="container">
   <div id="announcement" class="row col-md-12">
       <span class="col-sm"><button class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
-      <span class="col-xl">The <a class="switch-3" href="#2017-10">October
+      <span class="col-xl">The <a class="switch to-tab-3" href="#2017-10">October
         newsletter</a> is released. Our next meeting will be on October 16th
-        at Bearden Public Library. See the newsletter for details.</span>
+        at Bearden Public Library. See the <a class="switch to-tab-2">Meetings
+          tab</a> for details.</span>
   </div>
 </div>
 
@@ -142,15 +146,24 @@
         influence the political process.</p>
   </section>
   <section id="meetings-tab" class="row col-md-12">
-    <h2>September 2017 Monthly Meeting</h2>
-    <h3>September 18, 2017</h3>
-
-    <p>The Greater Knoxville Chapter of the Citizens’ Climate Lobby September
-      meeting will be held on Monday, September 18, 6:30 – 7:45 p. m.  at the
-      <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public Library, 100
-        Golfclub Rd, Knoxville TN</a>. The agenda is in the <a
-        class="switch-3" href="#2017-09-meeting">September Newsletter</a>.</p>>
+    <h2>Upcoming Meetings</h2>
+    <h3>October 16, 2017</h3>
+    <p>The October meeting will be held Monday, October 16, 6:00-8:00pm, at
+      the Bearden Public Library, 100 Golf Club Rd., Knoxville. The agenda
+      will be forthcoming.</p>
+    
     <h2>Past Meetings</h2>
+    <h3>September 18, 2017</h3>
+    
+        <p>The Greater Knoxville Chapter of the Citizens’ Climate Lobby
+          September meeting was held on Monday, September 18, 6:30 – 7:45 PM
+          at the <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public
+            Library, 100 Golfclub Rd, Knoxville TN</a>. The agenda was posted
+            in the <a class="switch to-tab-3" href="#2017-09-meeting">September
+              Newsletter</a>, and minutes were posted in the <a
+              class="switch to-tab-3" href="#2017-10">October
+              Newsletter</a>.</p>
+    
     <h3>Climate Advocate Training Workshop</h3>
     <h4>August 12, 2017</h4>
 
@@ -209,7 +222,7 @@
       <li>6:30 – 6:40 Highlights of CCL Monthly Saturday Call.</li>
       <li>6:40 – 7:05 Dr. Scott Painter, Climate Change Science Institute, Oak Ridge National Laboratory, Oak Ridge TN will speak about Climate Change and Hydrology.</li>
       <li>7:05-7:40 Organization and Reports of Chapter Teams (timing below approximate)<br>
-        7:05 – 7:15 Chapter Business (Teams. October 16 meeting)</br>
+        7:05 – 7:15 Chapter Business (Teams. October 16 meeting)<br>
         7:15 – 7:25 Team Planning</li>
       <li>7:30 – 7:40 Team “Laser” Reports</li>
         <li>7:40 – 7:45 Closing</li>
@@ -376,7 +389,8 @@
       support from conservatives and liberals alike. The workshop will include
       a mini-lobbying training.</p>
   </section>
-</div>  <!-- end .main-content Bootstrap container -->
+  </div> <!-- end #tabs -->
+</div>  <!-- end #main-content -->
 
 <footer class="container-fluid top-and-bottom">
     <div class="row col-md-12 text-center">
@@ -385,7 +399,7 @@
         <a href="https://citizensclimatelobby.org/">Citizens' Climate Lobby</a>
       </p>
     </div>  <!-- end Bootstrap row -->
-</footer>   <!-- end footer Bootstrap container -->
+</footer>   <!-- end footer -->
 <script>
   var loadDeferredStyles = function() {
     var addStylesNode = document.getElementById("deferred-styles");
