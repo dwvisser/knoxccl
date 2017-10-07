@@ -20,7 +20,8 @@
       $('#announcement button').on('click', function(){
         $(this).parent().parent().hide();
       })
-      $('#2017-10').load('newsletters/2017-10.html');
+      $('#newsletter-2017-10').load('newsletters/2017-10.html');
+      $('#agenda-2017-10').load('agendas/2017-10.html');
       $('body').on('click', '.switch', function(){
         var match = $(this).attr('class').match(/to-tab-(\d)/);
         if (match !== null && match.length > 1) {
@@ -91,9 +92,10 @@
 <div class="container">
   <div id="announcement" class="row col-md-12">
       <span class="col-sm"><button class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
-      <span class="col-xl">The <a class="switch to-tab-3" href="#2017-10">October
-        newsletter</a> is released. Our next meeting will be on October 16th
-        at Bearden Public Library. See the <a class="switch to-tab-2">Meetings
+      <span class="col-xl">The <a class="switch to-tab-3"
+        href="#newsletter-2017-10">October newsletter</a> is released. Our
+        next meeting will be on October 16th at Bearden Public Library. See
+        the <a class="switch to-tab-2" href="#agenda-2017-10">Meetings
           tab</a> for details.</span>
   </div>
 </div>
@@ -147,10 +149,9 @@
   </section>
   <section id="meetings-tab" class="row col-md-12">
     <h2>Upcoming Meetings</h2>
+    
     <h3>October 16, 2017</h3>
-    <p>The October meeting will be held Monday, October 16, 6:00-8:00pm, at
-      the Bearden Public Library, 100 Golf Club Rd., Knoxville. The agenda
-      will be forthcoming.</p>
+    <div id="agenda-2017-10"></div>
     
     <h2>Past Meetings</h2>
     <h3>September 18, 2017</h3>
@@ -193,7 +194,7 @@
 
   </section>
   <section id="newsletters-tab" class="row col-md-12">
-    <div id="2017-10"></div>
+    <div id="newsletter-2017-10"></div>
     <h2>August 28, 2017</h2>
       
       <h3>August Reports</h3>
