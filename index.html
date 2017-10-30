@@ -21,6 +21,7 @@
         $(this).parent().parent().hide();
       })
       $('#newsletter-2017-10').load('newsletters/2017-10.html');
+      $('#newsletter-2017-11').load('newsletters/2017-11.html');
       $('#agenda-2017-10').load('agendas/2017-10.html');
       $('body').on('click', '.switch', function(){
         var match = $(this).attr('class').match(/to-tab-(\d)/);
@@ -93,10 +94,9 @@
   <div id="announcement" class="row col-md-12">
       <span class="col-sm"><button class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
       <span class="col-xl">The <a class="switch to-tab-3"
-        href="#newsletter-2017-10">October newsletter</a> is released. Our
-        next meeting will be on October 16th at Bearden Public Library. See
-        the <a class="switch to-tab-2" href="#agenda-2017-10">Meetings
-          tab</a> for details.</span>
+        href="#newsletter-2017-11">November newsletter</a> is released. Our
+        next meeting will be on November 20th at Bearden Public
+        Library.</span>
   </div>
 </div>
 
@@ -194,6 +194,7 @@
 
   </section>
   <section id="newsletters-tab" class="row col-md-12">
+    <div id="newsletter-2017-11"></div>
     <div id="newsletter-2017-10"></div>
     <h2>August 28, 2017</h2>
       
