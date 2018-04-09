@@ -77,6 +77,14 @@ ol ol ol {
     background-color: rgb(67,106,87);
 }
 
+.announcement {
+    background-color: yellow;
+    border-color: goldenrod;
+    border-width: 3px;
+    border-style: solid;
+    margin-bottom: 1em;
+}
+
 a:hover { /* class or pseudo-class + element */
     color: rgb(221,234,165);
 }
@@ -98,14 +106,6 @@ a:visited {
 }
 
 /* Hightest priority: id's */
-
-#announcement {
-    background-color: yellow;
-    border-color: goldenrod;
-    border-width: 3px;
-    border-style: solid;
-    margin-bottom: 1em;
-}
 
 #tabs-list {
     background-color: rgb(129,137,100);
