@@ -40,12 +40,12 @@
 <noscript id="deferred-styles">
   <!-- Bootstrap http://getbootstrap.com -->
   <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
   <!-- Font Awesome https://fortawesome.github.io/Font-Awesome/ -->
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
 
   <!-- My styles -->
@@ -61,7 +61,7 @@
       <p>Help us <em>solve</em> climate change.</p>
       <p id="banner-links">
           <a href="https://knoxccl.slack.com/" target="_blank"
-             title="KnoxCCL Slack (click on the e-mail icon to request an invitation to join)"><i class="fa fa-slack fa-lg"></i></a>
+             title="KnoxCCL Slack (click on the e-mail icon to request an invitation to join)"><i class="fab fa-slack fa-lg"></i></a>
           <a href="https://calendar.google.com/calendar?cid=NWtnc2w2aGl0OG4wMDJraGd0bTVpaW9wazBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
              target="_blank" title="Add KnoxCCL Events to your Google Calendar"><i class="fa fa-calendar fa-lg"></i></a>   
           <a href="https://www.meetup.com/Citizens-Climate-Lobby-Knoxville/"
@@ -69,22 +69,22 @@
              <i class="fa fa-users fa-lg"></i></a>
           <a href="https://www.facebook.com/Citizens-Climate-Lobby-Knoxville-Chapter-159872501112806/"
              target="_blank" title="Facebook">
-             <i class="fa fa-facebook-square fa-lg"></i></a>
+             <i class="fab fa-facebook-square fa-lg"></i></a>
           <a href="https://groups.google.com/forum/#!forum/knoxccl"
              target="_blank"  title="Google Group">
-             <i class="fa fa-google fa-lg"></i></a>
+             <i class="fab fa-google fa-lg"></i></a>
           <a href="mailto:knoxccl@googlegroups.com"
               title="Email">
              <i class="fa fa-envelope fa-lg"></i></a>
           | &nbsp;
           <a href="https://twitter.com/citizensclimate" target="_blank"
-             title="Twitter"><i class="fa fa-twitter fa-lg"></i></a>
+             title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
           <a href="http://instagram.com/citizensclimate"
              target="_blank"  title="Instagram">
-             <i class="fa fa-instagram fa-lg"></i></a>
+             <i class="fab fa-instagram fa-lg"></i></a>
           <a href="https://www.youtube.com/channel/UCWuCkmi8ySLMTZEpJC7jMsA"
              target="_blank" title="YouTube">
-             <i class="fa fa-youtube fa-lg"></i></a>
+             <i class="fab fa-youtube fa-lg"></i></a>
           <a href="http://ccl.podbean.com/"
              target="_blank"  title="Podcast">
              <i class="fa fa-podcast fa-lg"></i></a>
@@ -97,17 +97,22 @@
 </div>  <!-- end .jumbotron -->
 
 <div class="container">
-  <div class="announcement row col-md-12">
-      <span class="col-sm"><button
-        class="ui-icon ui-icon-closethick ui-corner-all">Hide</button></span>
-      <span class="col-xl">Citizens Climate Lobby (CCL) of Greater Knoxville will host
+  <div class="row">
+  <div class="col-md-12">
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+      Citizens Climate Lobby (CCL) of Greater Knoxville will host
         Congressional Candidate for District 2, Marc Whitmire, at our next meeting on
-        <a class="switch to-tab-2" href="#2018-06-meeting">June 19th, 7:00p.m., 3131 Morris
+        <a class="alert-link switch to-tab-2" href="#2018-06-meeting">June 19th, 7:00p.m., 3131 Morris
           Ave., Knoxville</a>. Please join us for a stimulating interactive discussion about
           how congressional public policy can effectively address the challenges of climate
           change. Everyone is welcome to attend and actively participate and we look forward to
           seeing you there.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
   </div>
+  </div> <!-- end column -->
+  </div> <!-- end row -->
 </div>
 
 <div id="main-content" class="container">
@@ -452,12 +457,14 @@
 </div>  <!-- end #main-content -->
 
 <footer class="container-fluid top-and-bottom">
-    <div class="row col-md-12 text-center">
-      <p>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-center">
         <a href="https://citizensclimatelobby.org/join-citizens-climate-lobby/?tfa_4565=TN+Knoxville">Join Our Chapter!</a> |
         <a href="https://citizensclimatelobby.org/">Citizens' Climate Lobby</a>
       </p>
-    </div>  <!-- end Bootstrap row -->
+    </div> <!-- end column -->
+  </div> <!-- end row -->
 </footer>   <!-- end footer -->
 <script>
   var loadDeferredStyles = function() {
@@ -472,5 +479,14 @@
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
 </script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+crossorigin="anonymous"></script>
 </body>
 </html>

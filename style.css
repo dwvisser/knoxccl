@@ -25,7 +25,6 @@ ol ol {
 
 footer p { /* 2 elements bump priority over one element */
     color: white;
-    display: inline-block;
     font-size: small;
     height: 38px;
     line-height: 45px;
