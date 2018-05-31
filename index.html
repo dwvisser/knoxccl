@@ -12,27 +12,6 @@
   <meta property="og:description"
         content="We are a new chapter of the Citizens' Climate Lobby established to focus on the impacts of climate change on the Greater Knoxville region." />
   <title>Greater Knoxville Citizens' Climate Lobby</title>
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
-  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
-  <script>
-    $( function() {
-      $( "#tabs" ).tabs();
-      $('#announcement button').on('click', function(){
-        $(this).parent().parent().hide();
-      })
-      $('#newsletter-2017-10').load('newsletters/2017-10.html');
-      $('#newsletter-2017-11').load('newsletters/2017-11.html');
-      $('#agenda-2017-10').load('agendas/2017-10.html');
-      $('#agenda-2017-11').load('agendas/2017-11.html');
-      $('body').on('click', '.switch', function(){
-        var match = $(this).attr('class').match(/to-tab-(\d)/);
-        if (match !== null && match.length > 1) {
-          $('#tabs').tabs( {active: Number(match[1])});
-        }
-      });
-    });
-</script>
 </head>
 
 <body>
@@ -46,7 +25,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
 
   <!-- My styles -->
   <link rel="stylesheet" href="style.css">
@@ -115,16 +93,32 @@
   </div> <!-- end row -->
 </div>
 
-<div id="main-content" class="container">
-  <div id="tabs" class="row col-md-12">
-    <ul id="tabs-list">
-      <li><a href="#about-us-tab">About Us</a></li>
-      <li><a href="#about-ccl-tab">About CCL</a></li>
-      <li><a href="#meetings-tab">Meetings</a></li>
-      <li><a href="#newsletters-tab">Newsletters</a></li>
-    </ul>
-
-    <section id="about-us-tab">
+<div id="main-container" class="container">
+  <div id="main-row" class="row">
+    <div id="main-column" class="col-md-12">
+    <ul id="tabs-list" class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#about-us" class="nav-link active" id="about-us-tab"
+           data-toggle="tab" role="tab" aria-controls="about-us"
+           aria-selected="true">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about-ccl" class="nav-link" id="about-ccl-tab" data-toggle="tab"
+        role="tab" aria-controls="about-ccl" aria-selected="false">About CCL</a>
+      </li>
+      <li class="nav-item">
+        <a href="#meetings" class="nav-link" id="meetings-tab" data-toggle="tab"
+        role="tab" aria-controls="meetings" aria-selected="false">Meetings</a>
+      </li>
+      <li class="nav-item">
+        <a href="#newsletters" class="nav-link" id="newsletters-tab"
+        data-toggle="tab" role="tab" aria-controls="newsletters"
+        aria-selected="false">Newsletters</a>
+      </li>
+    </ul> <!-- end tabs-list -->
+    <div id="content-for-tabs" class="tab-content">
+    <div id="about-us" class="tab-pane fade show active" role="tabpanel"
+         aria-labelledby="about-us-tab">
 
       <p>We are a new chapter of the Citizens' Climate Lobby established to
         focus on the impacts of climate change on the Greater Knoxville
@@ -138,8 +132,9 @@
         validity; whether you have abundant funds or have less; whether you
         are younger or older; <em>all</em> are welcome to the Greater
         Knoxville Citizens' Climate Lobby meetings.</p>
-    </section>
-    <section id="about-ccl-tab" class="row col-md-12">
+      </div> <!-- end about-us -->
+    <div id="about-ccl" class="tab-pane fade" id="profile" role="tabpanel"
+         aria-labelledby="about-ccl-tab">
 
       <p>Citizens’ Climate Lobby is a nonprofit, nonpartisan, grassroots
         advocacy organization empowering people to experience breakthroughs
@@ -161,8 +156,9 @@
       <p>We’ve seen firsthand how passionate citizens who are well-trained,
         organized by district and with a good system of support can more than
         influence the political process.</p>
-  </section>
-  <section id="meetings-tab" class="row col-md-12">
+    </div> <!-- end about-ccl -->
+    <div id="meetings" class="tab-pane fade" id="profile" role="tabpanel"
+         aria-labelledby="meetings-tab">
     <h2>Upcoming Meetings</h2>
 
     <h3 name="2018-06-meeting">June 19, 2018</h3>
@@ -240,10 +236,11 @@
       once on campus</b>: <a href="files/MapUTKInstituteOfAgriculture.pdf">[UTK
       Institutue of Agriculture Map]</a></p>
 
-  </section>
-  <section id="newsletters-tab" class="row col-md-12">
+      </div> <!-- end meetings -->
+  <div id="newsletters" class="tab-pane fade" role="tabpanel"
+       aria-labelledby="newsletters-tab">
     <h2 id="2018-05-newsletter">April 27, 2018</h2>
-    <p>The newsletter is viwable
+    <p>The newsletter is viewable
       <a href="https://drive.google.com/file/d/1Nb6SeSmAB7nu0m8c65FgDlUIttkK9evE/view?usp=sharing">here</a>.</p>
     <h2 id="2018-04-newsletter">April 8, 2018</h2>
 
@@ -452,9 +449,11 @@
       specific market-based, consumer-friendly solutions that have received
       support from conservatives and liberals alike. The workshop will include
       a mini-lobbying training.</p>
-  </section>
-  </div> <!-- end #tabs -->
-</div>  <!-- end #main-content -->
+    </div> <!-- end newsletters -->
+  </div> <!-- end content-for-tabs -->
+  </div> <!-- end main-column -->
+  </div> <!-- end main-row -->
+</div>  <!-- end #main-container -->
 
 <footer class="container-fluid top-and-bottom">
   <div class="row">
@@ -479,14 +478,22 @@
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
 </script>
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script> -->
+crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
 integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 crossorigin="anonymous"></script>
+<script>
+    $( function() {
+      $('#newsletter-2017-10').load('newsletters/2017-10.html');
+      $('#newsletter-2017-11').load('newsletters/2017-11.html');
+      $('#agenda-2017-10').load('agendas/2017-10.html');
+      $('#agenda-2017-11').load('agendas/2017-11.html');
+    });
+</script>
 </body>
 </html>

@@ -31,11 +31,16 @@ footer p { /* 2 elements bump priority over one element */
     vertical-align: middle;
 }
 
-section h2 {
+#content-for-tabs .tab-pane h2 {
     background-color: rgb(129,137,100);
     color: white;
     letter-spacing: 1px;
     padding: 6px;
+}
+
+#main-column {
+    border: 1px solid #c5c5c5;
+    border-radius: 0.5em;
 }
 
 ol ol ol {
@@ -43,6 +48,18 @@ ol ol ol {
 }
 
 /* Next lowest priority: classes  and pseudo-classes */
+
+.nav-tabs .nav-link {
+    background-color: #f6f6f6;
+    border-color: rgb(221,234,165);
+    color: black;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: rgb(186,191,133);
+    border-color: #c5c5c5;
+    color: white;
+}
 
 .white-popup {
   position: relative;
