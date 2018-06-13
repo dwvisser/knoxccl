@@ -80,7 +80,7 @@
   <div class="alert alert-info alert-dismissible fade show" role="alert">
       Citizens Climate Lobby (CCL) of Greater Knoxville will host
         Congressional Candidate for District 2, Marc Whitmire, at our next meeting on
-        <a class="alert-link switch to-tab-2" href="#2018-06-meeting">June 19th, 7:00p.m., 3131 Morris
+        <a class="alert-link switch to-tab-meetings" href="#2018-06-meeting">June 19th, 7:00p.m., 3131 Morris
           Ave., Knoxville</a>. Please join us for a stimulating interactive discussion about
           how congressional public policy can effectively address the challenges of climate
           change. Everyone is welcome to attend and actively participate and we look forward to
@@ -204,9 +204,9 @@
           September meeting was held on Monday, September 18, 6:30 – 7:45 PM
           at the <a href="https://goo.gl/maps/PPJjfz2H7sJ2">Bearden Public
             Library, 100 Golfclub Rd, Knoxville TN</a>. The agenda was posted
-            in the <a class="switch to-tab-3" href="#2017-09-meeting">September
+            in the <a class="switch to-tab-meetings" href="#2017-09-meeting">September
               Newsletter</a>, and minutes were posted in the <a
-              class="switch to-tab-3" href="#2017-10">October
+              class="switch to-tab-newsletters" href="#2017-10">October
               Newsletter</a>.</p>
     
     <h3>Climate Advocate Training Workshop</h3>
@@ -478,9 +478,9 @@
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
 </script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 crossorigin="anonymous"></script>
@@ -493,6 +493,13 @@ crossorigin="anonymous"></script>
       $('#newsletter-2017-11').load('newsletters/2017-11.html');
       $('#agenda-2017-10').load('agendas/2017-10.html');
       $('#agenda-2017-11').load('agendas/2017-11.html');
+      $('body').on('click', '.switch', function() {
+         const match = $(this).attr('class').match(/to-tab-(\w+)/);
+         if (match !== null && match.length > 1) {
+           const tab = match[1];
+           $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+         }
+      });
     });
 </script>
 </body>
