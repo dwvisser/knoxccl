@@ -78,10 +78,10 @@ ol ol ol {
 
 .jumbotron { /* From Bootstrap */
     /* Image source: http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg */
-    background-image: url("images/low_smoky-mountains-1379552973wwG.jpg");
+    background-image: url("../images/low_smoky-mountains-1379552973wwG.jpg");
     background-image: image-set(
-        url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
-        url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+        url("../images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+        url("../images/low_smoky-mountains-1379552973wwG.jpg") 1920w
     );
     background-position: bottom center;
     background-size: cover;
