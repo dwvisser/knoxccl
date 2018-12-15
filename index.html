@@ -6,6 +6,7 @@
   <meta name="Description"
         content="We are a new chapter of the Citizens' Climate Lobby established to focus on the impacts of climate change on the Greater Knoxville region.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name='theme-color' content='#818964'>
   <!-- Open Graph data -->
   <meta property="og:title" content="Greater Knoxville Citizens' Climate Lobby" />
   <meta property="og:type" content="website" />
@@ -13,6 +14,7 @@
   <meta property="og:image" content="https://knoxccl.org/images/thumbnail.jpg" />
   <meta property="og:description"
         content="We are a new chapter of the Citizens' Climate Lobby established to focus on the impacts of climate change on the Greater Knoxville region." />
+  <link rel='manifest' href='manifest.json'>
   <link rel="icon" type="image/png" href="images/120px-Human-emblem-web-green-128.png">
   <title>Greater Knoxville Citizens' Climate Lobby</title>
 </head>
@@ -506,6 +508,16 @@
 </footer>   <!-- end footer -->
 <script>
   (function(){
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+        navigator.serviceWorker.ready.then(function(registration) {
+            console.log('Service Worker Ready');
+        });
+    }
+
     function loadDeferredStyles() {
       const addStylesNode = document.getElementById("deferred-styles");
       const replacement = document.createElement("div");

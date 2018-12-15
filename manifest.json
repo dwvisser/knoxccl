@@ -1,0 +1,42 @@
+{
+  "name": "Greater Knoxville Citizens' Climate Lobby",
+  "short_name": "KnoxCCL",
+  "icons": [
+      {
+        "src": "/images/Human-emblem-web-green-48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      }, 
+
+      {
+        "src": "/images/Human-emblem-web-green-72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      }, 
+      {
+        "src": "/images/Human-emblem-web-green-96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      }, 
+      {
+        "src": "/images/Human-emblem-web-green-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }, 
+      {
+        "src": "/images/Human-emblem-web-green-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }, 
+      {
+        "src": "/images/Human-emblem-web-green-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      } 
+      ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#436a57",
+  "theme_color": "#818964"
+}
