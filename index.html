@@ -509,17 +509,25 @@
   </div> <!-- end row -->
 </footer>   <!-- end footer -->
 <script>
-  var loadDeferredStyles = function() {
-    var addStylesNode = document.getElementById("deferred-styles");
-    var replacement = document.createElement("div");
-    replacement.innerHTML = addStylesNode.textContent;
-    document.body.appendChild(replacement)
-    addStylesNode.parentElement.removeChild(addStylesNode);
-  };
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+  (function(){
+    function loadDeferredStyles() {
+      const addStylesNode = document.getElementById("deferred-styles");
+      const replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    }
+
+    const raf = requestAnimationFrame || mozRequestAnimationFrame ||
       webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-  else window.addEventListener('load', loadDeferredStyles);
+    if (raf) {
+      raf(function() {
+          window.setTimeout(loadDeferredStyles, 0);
+      });
+    } else {
+      window.addEventListener('load', loadDeferredStyles);
+    }
+  })();
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
