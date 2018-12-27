@@ -17,7 +17,7 @@
  *
  */
 
-const version = "0.1.4" ;
+const version = "0.1.5";
 const cacheName = `knoxccl-${version}`;
 const cacheAssets = [
     '/',
@@ -30,6 +30,7 @@ const cacheAssets = [
     '/newsletters/2017-11.html',
     '/agendas/2017-10.html',
     '/agendas/2017-11.html',
+    '/flyers/2019-Feb-Forum.html',
     '/styles/bootstrap-4.1.3.min.css',
     '/styles/fontawesome-5.3.1.css',
     '/styles/main.css',
