@@ -22,5 +22,6 @@ module.exports = {
         maxEntries: 100,
       },
     },
-  }]
+  }],
+  navigateFallback: '/index.html'
 };
