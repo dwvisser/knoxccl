@@ -18,5 +18,6 @@ sure that users always pull up the latest site version:
 
 * It is very importan that whenever `index.html` changes, to invalidate both `/` and
   `/index.html`.
-* The `service-worker.js` file needs to be updated (see above) and invalidated for pretty much
-  any site changes.
+* The `service-worker.js` file needs to be updated (see above), copied to S3 (sometimes the
+  sync script fails to do this, so an `aws s3 cp` command must be done), and invalidated for
+  pretty much any site changes.
