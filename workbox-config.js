@@ -22,5 +22,12 @@ module.exports = {
         maxEntries: 100,
       },
     },
-  }]
+  }],
+  // See https://developers.google.com/web/tools/workbox/modules/workbox-build#full_generatesw_config
+  // The following 2 options force kicking out the old ServiceWorker and activating the
+  // new one on all client tabs as soon as the new ServiceWorker is installed. It is an
+  // anti-pattern for PWAs in general (see https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68),
+  // but for this simple "static" site I would rather users always see the latest content.
+  skipWaiting: true,
+  clientsClaim: true
 };

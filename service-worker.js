@@ -13,6 +13,9 @@
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
+workbox.skipWaiting();
+workbox.clientsClaim();
+
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
@@ -29,11 +32,11 @@ self.__precacheManifest = [
   },
   {
     "url": "flyers/2019-Feb-Forum.html",
-    "revision": "66ce66d067fd11f40ba364ffc41821c6"
+    "revision": "1a686b54505bfd3ee3c9fc668deb4ae1"
   },
   {
     "url": "index.html",
-    "revision": "3551b33ef30eae00a9fb3453d6908dd9"
+    "revision": "7361f157253c6169fa939d70aa0ce799"
   },
   {
     "url": "manifest.json",
@@ -81,7 +84,7 @@ self.__precacheManifest = [
   },
   {
     "url": "workbox-config.js",
-    "revision": "1cf61e42906b92b4b4dd9d9554de7e3b"
+    "revision": "1148939bbcb945dae2bc4f1c856d5fa3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
