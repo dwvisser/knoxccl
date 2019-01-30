@@ -58,7 +58,6 @@
           <a href="mailto:knoxccl@googlegroups.com"
               title="Email">
              <i class="fas fa-envelope fa-lg"></i></a>
-          <span style="font-size:2em">|</span> &nbsp;
           <a href="https://twitter.com/citizensclimate" target="_blank"
              title="Twitter" rel=noreferrer><i class="fab fa-twitter fa-lg"></i></a>
           <a href="http://instagram.com/citizensclimate"
@@ -527,6 +526,9 @@
           navigator.serviceWorker.ready.then(function(registration) {
             console.log('Service Worker Ready');
           });
+          navigator.serviceWorker.addEventListener('controllerchange',
+            function() { window.location.reload(); }
+          );
         })
     }
 
