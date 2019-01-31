@@ -21,3 +21,14 @@ sure that users always pull up the latest site version:
 * The `service-worker.js` file needs to be updated (see above), copied to S3 (sometimes the
   sync script fails to do this, so an `aws s3 cp` command must be done), and invalidated for
   pretty much any site changes.
+
+## Whenever an update is made to the web site...
+
+Make sure to update (or have someone else update) in these other places, too, where
+appropriate.
+
+* [Facebook](https://www.facebook.com/Citizens-Climate-Lobby-Knoxville-Chapter-159872501112806/)
+* [Meetup.com](https://www.meetup.com/Citizens-Climate-Lobby-Knoxville/)
+* [Google Calendar](https://calendar.google.com/calendar?cid=NWtnc2w2aGl0OG4wMDJraGd0bTVpaW9wazBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+* [Slack](https://knoxccl.slack.com/)
+* [Google Group](https://groups.google.com/forum/#!forum/knoxccl)
