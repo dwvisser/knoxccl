@@ -76,47 +76,17 @@
   </div> <!-- end Bootstrap container -->
 </div>  <!-- end .jumbotron -->
 
-<div class="container"> <!-- Announcements -->
-  <div class="row">
-    <div class="col-md-12">
-      <div class="alert alert-info alert-dismissible fade show" role=alert>
-        <p>An <a class="alert-link switch to-tab-meetings"
-          href="#2019-02-meeting">updated agenda</a> for the meeting on Tuesday, February 19th is
-          available.</p>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-    </div>
-  </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="alert alert-info alert-dismissible fade show" role=alert>
-          <p>Come to our Climate Change Action Forum on Saturday, February 9th at 10 AM!
-            <a class=alert-link href="https://catwknoxvilletn.eventbrite.com/">Register here</a>
-            or e-mail Chet Hunt at <a class=alert-link
-            href="mailto:chunt51@comcast.net">chunt51@comcast.net</a> to attend.</p>
-            <div id=2019-feb-forum></div>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-      </div>
-    </div>
-</div> <!-- Announcements -->
-
 <div id="main-container" class="container">
   <div id="main-row" class="row">
     <div id="main-column" class="col-md-12">
     <ul id="tabs-list" class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a href="#about-us" class="nav-link active" id="about-us-tab"
-           data-toggle="tab" role="tab" aria-controls="about-us"
-           aria-selected="true">About Us</a>
+      <li class=nav-item>
+          <a href="#news" class="nav-link active" id=news-tab data-toggle=tab role=tab
+              aria-controls=news aria-selected=true>News</a>
       </li>
-      <li class="nav-item">
-        <a href="#about-ccl" class="nav-link" id="about-ccl-tab" data-toggle="tab"
-        role="tab" aria-controls="about-ccl" aria-selected="false">About CCL</a>
+      <li class=nav-item>
+        <a href="#about" class=nav-link id=about-tab data-toggle=tab role=tab
+           aria-controls=about aria-selected=false>About</a>
       </li>
       <li class=nav-item>
         <a href="#calendar" class=nav-link id=calendar-tab data-toggle=tab role=tab
@@ -133,10 +103,31 @@
       </li>
     </ul> <!-- end tabs-list -->
     <div id="content-for-tabs" class="tab-content">
-    <div id="about-us" class="tab-pane fade show active" role="tabpanel"
-         aria-labelledby="about-us-tab">
-
-      <p>We are a new chapter of the Citizens' Climate Lobby established to
+    <div id=news class="tab-pane fade show active" role=tabpanel aria-labelledby=news-tab>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-info" role=alert>
+            <p>An <a class="alert-link switch to-tab-meetings"
+              href="#2019-02-meeting">updated agenda</a> for the meeting on Tuesday, February 19th is
+              available.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-info" role=alert>
+            <p>Come to our Climate Change Action Forum on Saturday, February 9th at 10 AM!
+              <a class=alert-link href="https://catwknoxvilletn.eventbrite.com/">Register here</a>
+              or e-mail Chet Hunt at <a class=alert-link
+              href="mailto:chunt51@comcast.net">chunt51@comcast.net</a> to attend.</p>
+              <div id=2019-feb-forum></div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end news -->
+    <div id=about class="tab-pane fade" role=tabpanel aria-labelledby=about-tab>
+      <h3>About Our Chapter</h3>
+      <p>We are a chapter of the Citizens' Climate Lobby (CCL) established to
         focus on the impacts of climate change on the Greater Knoxville
         region, influences that touch each of us individually, effects that
         impact us collectively as a community, and shocks that range to the
@@ -148,9 +139,7 @@
         validity; whether you have abundant funds or have less; whether you
         are younger or older; <em>all</em> are welcome to the Greater
         Knoxville Citizens' Climate Lobby meetings.</p>
-      </div> <!-- end about-us -->
-    <div id="about-ccl" class="tab-pane fade" id="profile" role="tabpanel"
-         aria-labelledby="about-ccl-tab">
+      <h3>About CCL</h3>
 
       <p>Citizens’ Climate Lobby is a nonprofit, nonpartisan, grassroots
         advocacy organization empowering people to experience breakthroughs
@@ -172,7 +161,7 @@
       <p>We’ve seen firsthand how passionate citizens who are well-trained,
         organized by district and with a good system of support can more than
         influence the political process.</p>
-    </div> <!-- end about-ccl -->
+    </div> <!-- end about -->
 
     <div id=calendar class="tab-pane fade" role=tabpanel aria-labelledby=calendar-tab>
       <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=5kgsl6hit8n002khgtm5iiopk0%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FNew_York"
