@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "afd251a14eaaadcc0da9b08dadfc797b"
+    "revision": "29f27da555fbe15dbdc3a20d3e1f5b3b"
   },
   {
     "url": "manifest.json",
@@ -51,24 +51,24 @@ self.__precacheManifest = [
     "revision": "e82ee9943f9bafc6497922eca13da2c2"
   },
   {
-    "url": "scripts/bootstrap-4.1.3.min.js",
-    "revision": "67176c242e1bdc20603c878dee836df3"
+    "url": "scripts/bootstrap-4.2.1.min.js",
+    "revision": "6895e8cd60b62646ce12426015888f58"
   },
   {
     "url": "scripts/jquery-3.3.1.min.js",
     "revision": "a09e13ee94d51c524b7e2a728c7d4039"
   },
   {
-    "url": "scripts/popper-1.14.3.min.js",
-    "revision": "83fb8c4d9199dce0224da0206423106f"
+    "url": "scripts/popper-1.14.7.min.js",
+    "revision": "56456db9d72a4b380ed3cb63095e6022"
   },
   {
-    "url": "styles/bootstrap-4.1.3.min.css",
-    "revision": "04aca1f4cd3ec3c05a75a879f3be75a3"
+    "url": "styles/bootstrap-4.2.1.min.css",
+    "revision": "f411c136e2bb302ada2120b3eb1d5bc3"
   },
   {
-    "url": "styles/fontawesome-5.3.1.css",
-    "revision": "10519cfd3206802f58315b877a9beab5"
+    "url": "styles/fontawesome-5.7.1.css",
+    "revision": "7b1d7f457d056ace7b230b587b9f3753"
   },
   {
     "url": "styles/main.css",
