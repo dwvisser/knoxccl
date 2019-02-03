@@ -72,6 +72,7 @@
              target="_blank"  title="Community Blog">
              <i class="fas fa-rss fa-lg"></i></a>
       </p>
+      <div class=top-bottom-links></div>
     </div> <!-- end Bootstrap .row -->
   </div> <!-- end Bootstrap container -->
 </div>  <!-- end .jumbotron -->
@@ -495,16 +496,8 @@
   </div> <!-- end main-row -->
 </div>  <!-- end #main-container -->
 
-<footer class="container-fluid top-and-bottom">
-  <div class="row">
-    <div class="col-md-12">
-      <p class="text-center">
-        <a href="https://citizensclimatelobby.org/join-citizens-climate-lobby/?tfa_4565=TN+Knoxville">Join Our Chapter!</a> |
-        <a href="https://citizensclimatelobby.org/">Citizens' Climate Lobby</a>
-      </p>
-    </div> <!-- end column -->
-  </div> <!-- end row -->
-</footer>   <!-- end footer -->
+<footer class="container-fluid top-and-bottom top-bottom-links">
+</footer>
 <script>
   (function(){
     if('serviceWorker' in navigator) {
@@ -551,6 +544,7 @@
       $('#newsletter-2017-11').load('newsletters/2017-11.html');
       $('#agenda-2017-10').load('agendas/2017-10.html');
       $('#agenda-2017-11').load('agendas/2017-11.html');
+      $('.top-bottom-links').load('top-bottom-links.html');
       $('body').on('click', '.switch', function() {
          const match = $(this).attr('class').match(/to-tab-(\w+)/);
          if (match !== null && match.length > 1) {

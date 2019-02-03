@@ -123,6 +123,10 @@ a:visited {
 
 /* Hightest priority: id's */
 
+#news {
+    padding-top: 1rem;
+}
+
 #tabs-list {
     background-color: rgb(129,137,100);
 }
