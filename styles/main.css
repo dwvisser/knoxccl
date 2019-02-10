@@ -19,6 +19,12 @@ ol {
     list-style-type: decimal;
 }
 
+#photos img {
+    width: 100%;
+    display: block;
+    padding-bottom: 1em;
+}
+
 ol ol {
     list-style-type: lower-alpha;
 }
