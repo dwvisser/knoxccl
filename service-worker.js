@@ -88,10 +88,10 @@ self.__precacheManifest = [
   },
   {
     "url": "workbox-config.js",
-    "revision": "1148939bbcb945dae2bc4f1c856d5fa3"
+    "revision": "d55655524c5c67a10a02e8557068823f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg|pdf)$/, workbox.strategies.cacheFirst({ "cacheName":"images-and-docs", plugins: [new workbox.expiration.Plugin({"maxEntries":100,"purgeOnQuotaError":false})] }), 'GET');
+workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg|pdf)$/i, workbox.strategies.cacheFirst({ "cacheName":"images-and-docs", plugins: [new workbox.expiration.Plugin({"maxEntries":100,"purgeOnQuotaError":false})] }), 'GET');
