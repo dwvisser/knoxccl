@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "11315469d584d3e35c0c5d9f1ff5db33"
+    "revision": "747950324489730c6fed8921d55a630f"
   },
   {
     "url": "manifest.json",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "6e98aa1b553360bebc102a15b5adc708"
+    "revision": "9845ee453cd4bd26f5299d16f45967fe"
   },
   {
     "url": "top-bottom-links.html",
