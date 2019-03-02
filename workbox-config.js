@@ -11,7 +11,7 @@ module.exports = {
     urlPattern: /\.(?:png|jpg|jpeg|svg|pdf)$/i,
 
     // Apply a cache-first strategy.
-    handler: 'cacheFirst',
+    handler: 'CacheFirst',
 
     options: {
       // Use a custom cache name.
