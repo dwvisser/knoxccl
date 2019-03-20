@@ -19,7 +19,7 @@ ol {
     list-style-type: decimal;
 }
 
-#photos img, #news img {
+#photos img, #home img {
     width: 100%;
     display: block;
     padding-bottom: 1em;

@@ -11,9 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.1/workbox-sw.js");
 
 workbox.core.skipWaiting();
+
 workbox.core.clientsClaim();
 
 /**
@@ -72,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "9845ee453cd4bd26f5299d16f45967fe"
+    "revision": "a94819fc004e4354ab77cbfbfb3478e5"
   },
   {
     "url": "top-bottom-links.html",
