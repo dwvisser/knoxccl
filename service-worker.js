@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 workbox.core.skipWaiting();
 
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "47e68ae993c2dd8eafca4e86306743e4"
+    "revision": "8cd900848e7a6633f6a584f951d26050"
   },
   {
     "url": "manifest.json",
@@ -52,28 +52,28 @@ self.__precacheManifest = [
     "revision": "e82ee9943f9bafc6497922eca13da2c2"
   },
   {
-    "url": "scripts/bootstrap-4.2.1.min.js",
-    "revision": "6895e8cd60b62646ce12426015888f58"
+    "url": "scripts/bootstrap-4.3.1.min.js",
+    "revision": "e1d98d47689e00f8ecbc5d9f61bdb42e"
   },
   {
-    "url": "scripts/jquery-3.3.1.min.js",
-    "revision": "a09e13ee94d51c524b7e2a728c7d4039"
+    "url": "scripts/jquery-3.4.0.min.js",
+    "revision": "bbcf3bf05fa6cb58a67cfd0498f00d23"
   },
   {
-    "url": "scripts/popper-1.14.7.min.js",
-    "revision": "56456db9d72a4b380ed3cb63095e6022"
+    "url": "scripts/popper-1.15.0.min.js",
+    "revision": "e21a6649041ef6f5f1bf43f11946621f"
   },
   {
-    "url": "styles/bootstrap-4.2.1.min.css",
-    "revision": "f411c136e2bb302ada2120b3eb1d5bc3"
+    "url": "styles/bootstrap-4.3.1.min.css",
+    "revision": "a15c2ac3234aa8f6064ef9c1f7383c37"
   },
   {
-    "url": "styles/fontawesome-5.7.1.css",
-    "revision": "7b1d7f457d056ace7b230b587b9f3753"
+    "url": "styles/fontawesome-5.8.1.min.css",
+    "revision": "e4c542a7f6bf6f74fdd8cdf6e8096396"
   },
   {
     "url": "styles/main.css",
-    "revision": "a94819fc004e4354ab77cbfbfb3478e5"
+    "revision": "40d65fdc63719c2a6aa9e9791ab2afc7"
   },
   {
     "url": "top-bottom-links.html",
