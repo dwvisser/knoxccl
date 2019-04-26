@@ -3,18 +3,23 @@
 Files for the Citizens' Climate Lobby chapter site in Knoxville, TN. Visit the
 website at [knoxccl.org](http://knoxccl.org).
 
-I use Google's Workbox utility to generate the `service-worker.js` file. Execute the following
-commands to deploy:
-
+I use WebPack to bundle JavaScript libraries for the page, and Google's Workbox utility to
+generate the `service-worker.js` file. Execute the followingcommands to deploy:
+ 
+    npx webpack --mode=production
     workbox generateSW workbox-config.js
 
-This will update the `service-worker.js` file.
+Note: the `test-server.sh` runs these 2 commands for you.
+
+Now, `dist/index.js` and `service-worker.js` will be up to date with the source code. If
+satisfied, then this is a good time to `git commit` and `git push`. The following command will
+push the files to AWS Simple Storage Service:
 
     ./sync-s3.sh
 
-Not in repo, since it has some bucket info I don't want to publicize. It will tell you
-what you need to do to create the appropriate invalidations on CloudFront. In order to make
-sure that users always pull up the latest site version:
+The script is not in the Git repository, since it has some bucket info I don't want to
+publicize. It will tell you what you need to do to create the appropriate invalidations on
+CloudFront. In order to make sure that users always pull up the latest site version:
 
 * It is very important that whenever `index.html` changes, to invalidate both `/` and
   `/index.html`.
