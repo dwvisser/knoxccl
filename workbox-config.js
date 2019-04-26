@@ -3,6 +3,12 @@ module.exports = {
   "globPatterns": [
     "**/*.{html,json,js,css,woff2}"
   ],
+  "globIgnores": [
+    "node_modules/**/*",
+    "package.json",
+    "package-lock.json",
+    "workbox-config.js"
+  ],
   "swDest": "service-worker.js",
 
   // Define runtime caching rules.
