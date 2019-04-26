@@ -7,6 +7,7 @@ module.exports = {
     "node_modules/**/*",
     "package.json",
     "package-lock.json",
+    "src/**/*",
     "workbox-config.js"
   ],
   "swDest": "service-worker.js",
