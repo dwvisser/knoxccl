@@ -17,8 +17,7 @@ push the files to AWS Simple Storage Service:
 
     ./sync-s3.sh
 
-The script is not in the Git repository, since it has some bucket info I don't want to
-publicize. It will tell you what you need to do to create the appropriate invalidations on
+The script will tell you what you need to do to create the appropriate invalidations on
 CloudFront. In order to make sure that users always pull up the latest site version:
 
 * It is very important that whenever `index.html` changes, to invalidate both `/` and

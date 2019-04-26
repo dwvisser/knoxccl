@@ -1,5 +1,5 @@
 .datignore
 dat.json
-sync-s3.sh
 node_modules
 dist/
+service-worker.js
