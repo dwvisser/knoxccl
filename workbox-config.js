@@ -8,7 +8,8 @@ module.exports = {
     "package.json",
     "package-lock.json",
     "src/**/*",
-    "workbox-config.js"
+    "workbox-config.js",
+    "webpack.config.js"
   ],
   "swDest": "service-worker.js",
 

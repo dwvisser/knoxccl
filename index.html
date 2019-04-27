@@ -19,21 +19,15 @@
   <link rel=apple-touch-icon href="images/120px-Human-emblem-web-green-80.png">
   <link rel=apple-touch-startup-image href="/images/low_smoky-mountains-1379552973wwG.jpg">
   <title>Greater Knoxville Citizens' Climate Lobby</title>
-</head>
 
-<body>
-
-<noscript id="deferred-styles">
   <!-- Bootstrap http://getbootstrap.com -->
   <link rel=stylesheet href="styles/bootstrap-4.3.1.min.css">
 
   <!-- Font Awesome https://fortawesome.github.io/Font-Awesome/ -->
-  <link rel=stylesheet href="styles/fontawesome-5.8.1.min.css">
+  <link rel=stylesheet href="dist/all.min.css">
+</head>
 
-  <!-- My styles -->
-  <link rel="stylesheet" href="styles/main.css">
-</noscript>
-
+<body>
 <div class="top-and-bottom jumbotron">
   <div class="container">
     <div class="row col-md-12">
@@ -546,26 +540,8 @@
           );
         })
     }
-
-    function loadDeferredStyles() {
-      const addStylesNode = document.getElementById("deferred-styles");
-      const replacement = document.createElement("div");
-      replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
-      addStylesNode.parentElement.removeChild(addStylesNode);
-    }
-
-    const raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) {
-      raf(function() {
-          window.setTimeout(loadDeferredStyles, 0);
-      });
-    } else {
-      window.addEventListener('load', loadDeferredStyles);
-    }
   })();
 </script>
-<script src=dist/main.js></script>
+<script src=dist/bundle.js></script>
 </body>
 </html>

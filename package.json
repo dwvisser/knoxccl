@@ -9,7 +9,17 @@
         "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/knoxccl.org"
     },
     "license": "CC-BY-NC-ND-4.0",
+    "scripts": {
+        "clean": "rm -rf dist webfonts service-worker.js",
+        "test": "./test-server.sh",
+        "build": "webpack"
+    },
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.8.1",
+        "css-loader": "^2.1.1",
+        "file-loader": "^3.0.1",
+        "style-loader": "^0.23.1",
+        "url-loader": "^1.1.2",
         "webpack": "^4.0.0",
         "webpack-cli": "^3.3.0",
         "workbox-webpack-plugin": "^4.0.0"

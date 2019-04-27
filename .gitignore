@@ -3,3 +3,5 @@ dat.json
 node_modules
 dist/
 service-worker.js
+*.woff2
+*.jpg

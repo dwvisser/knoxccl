@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap';
+import './main.css';
 
 $( function() {
     $('#2019-feb-forum').load('flyers/2019-Feb-Forum.html');
