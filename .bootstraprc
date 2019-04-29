@@ -65,43 +65,43 @@ styles:
   type: true
 
   # Components
-  alert: true
-  badge: true
-  breadcrumb: true
-  button-group: true
-  card: true
-  close: true
-  custom-forms: true
-  dropdown: true
-  input-group: true
+  alert: false
+  badge: false
+  breadcrumb: false
+  button-group: false
+  card: false
+  close: false
+  custom-forms: false
+  dropdown: false
+  input-group: false
   jumbotron: true
-  list-group: true
-  media: true
+  list-group: false
+  media: false
   nav: true
   navbar: true
-  pagination: true
-  progress: true
-  transitions: true
+  pagination: false
+  progress: false
+  transitions: false
 
   # Components w/ JavaScript
-  carousel: true
-  modal: true
-  popover: true
-  tooltip: true
+  carousel: false
+  modal: false
+  popover: false
+  tooltip: false
 
   # Utility classes
-  utilities: true
+  utilities: false
 
 ### Bootstrap scripts
 scripts:
-  alert: true
-  button: true
-  carousel: true
-  collapse: true
-  dropdown: true
-  modal: true
-  popover: true
-  scrollspy: true
+  alert: false
+  button: false
+  carousel: false
+  collapse: false
+  dropdown: false
+  modal: false
+  popover: false
+  scrollspy: false
   tab: true
   tooltip: true
-  util: true
+  util: false
