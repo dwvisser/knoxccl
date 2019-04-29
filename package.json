@@ -12,7 +12,8 @@
     "scripts": {
         "clean": "rm -rf dist webfonts service-worker.js",
         "build": "./build.sh",
-        "run": "python -m SimpleHTTPServer 3000"
+        "run": "python -m SimpleHTTPServer 3000",
+        "sync": "./sync-s3.sh"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
