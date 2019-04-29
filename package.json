@@ -11,8 +11,8 @@
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
         "clean": "rm -rf dist webfonts service-worker.js",
-        "test": "./test-server.sh",
-        "build": "webpack"
+        "build": "./build.sh",
+        "run": "python -m SimpleHTTPServer 3000"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
