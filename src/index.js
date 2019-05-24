@@ -5,16 +5,18 @@ require('./main.css');
 
 $( function() {
     function loadMeetingsTab() {
-        $('#meetings').load('meetings.html');
-        $('#2019-feb-forum').load('flyers/2019-Feb-Forum.html');
-        $('#agenda-2017-10').load('agendas/2017-10.html');
-        $('#agenda-2017-11').load('agendas/2017-11.html');
+        $('#meetings').load('meetings.html', function() {
+            $('#2019-feb-forum').load('flyers/2019-Feb-Forum.html');
+            $('#agenda-2017-10').load('agendas/2017-10.html');
+            $('#agenda-2017-11').load('agendas/2017-11.html');
+        });
     }
 
     function loadNewslettersTab() {
-        $('#newsletters').load('newsletters.html');
-        $('#newsletter-2017-10').load('newsletters/2017-10.html');
-        $('#newsletter-2017-11').load('newsletters/2017-11.html');
+        $('#newsletters').load('newsletters.html', function() {
+            $('#newsletter-2017-10').load('newsletters/2017-10.html');
+            $('#newsletter-2017-11').load('newsletters/2017-11.html');
+        });
     }
 
     function setupAboveFoldContent(){
