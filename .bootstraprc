@@ -72,7 +72,7 @@ styles:
   card: false
   close: false
   custom-forms: false
-  dropdown: false
+  dropdown: true
   input-group: false
   jumbotron: true
   list-group: false
@@ -90,7 +90,7 @@ styles:
   tooltip: false
 
   # Utility classes
-  utilities: false
+  utilities: true
 
 ### Bootstrap scripts
 scripts:
@@ -104,4 +104,4 @@ scripts:
   scrollspy: false
   tab: true
   tooltip: true
-  util: false
+  util: true
