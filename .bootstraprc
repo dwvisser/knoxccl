@@ -97,8 +97,8 @@ scripts:
   alert: false
   button: false
   carousel: false
-  collapse: false
-  dropdown: false
+  collapse: true
+  dropdown: true
   modal: false
   popover: false
   scrollspy: false
