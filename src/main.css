@@ -121,6 +121,18 @@ a:visited {
     color: rgb(129,137,100);
 }
 
+a.dropdown-item {
+    color: white;
+}
+
+a.dropdown-item:visited {
+    color:white;
+}
+
+a.dropdown-item:hover, a.nav-link:hover{
+    background-color: rgb(67,106,87);
+}
+
 .top-and-bottom a {
     color:white;
 }
