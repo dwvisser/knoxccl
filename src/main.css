@@ -24,7 +24,7 @@ ol {
     list-style-type: decimal;
 }
 
-#photos img, #home img {
+#photos img, #home img, #newsletters img {
     width: 100%;
     display: block;
     padding-bottom: 1em;
