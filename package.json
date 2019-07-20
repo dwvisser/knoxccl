@@ -12,7 +12,7 @@
     "scripts": {
         "clean": "rm -rf dist webfonts service-worker.js",
         "build": "./build.sh",
-        "test": "python -m SimpleHTTPServer 3000",
+        "serve": "python -m SimpleHTTPServer 3000",
         "deploy": "./sync-s3.sh"
     },
     "devDependencies": {

@@ -13,10 +13,13 @@ $( function() {
         });
     }
 
-    function loadNewslettersTab() {
+    function loadNewslettersAndPhotosTabs() {
         $('#newsletters').load('newsletters.html', function() {
             $('#newsletter-2017-10').load('newsletters/2017-10.html');
             $('#newsletter-2017-11').load('newsletters/2017-11.html');
+            $('#photos').load('photos.html', function(){
+                lazyload(); // Calling this after all lazyload images are in DOM.
+            });
         });
     }
 
@@ -35,8 +38,5 @@ $( function() {
     setupAboveFoldContent();
     $('#about').load('about.html');
     loadMeetingsTab();
-    loadNewslettersTab();
-    $('#photos').load('photos.html', function(){
-        lazyload();
-    });
+    loadNewslettersAndPhotosTabs();
 });
