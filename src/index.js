@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'popper.js';
 require('bootstrap-loader');
+require('lazyload');
 require('./main.css');
 
 $( function() {
@@ -35,5 +36,7 @@ $( function() {
     $('#about').load('about.html');
     loadMeetingsTab();
     loadNewslettersTab();
-    $('#photos').load('photos.html');
+    $('#photos').load('photos.html', function(){
+        lazyload();
+    });
 });
