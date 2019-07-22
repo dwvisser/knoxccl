@@ -14,20 +14,20 @@ $( function() {
 
     async function loadMeetingsTab() {
         await load('meetings', 'meetings.html');
-        load('2019-feb-forum', 'flyers/2019-Feb-Forum.html');
-        load('agenda-2017-10', 'agendas/2017-10.html');
-        load('agenda-2017-11', 'agendas/2017-11.html');
+        return Promise.all([load('2019-feb-forum', 'flyers/2019-Feb-Forum.html'),
+                            load('agenda-2017-10', 'agendas/2017-10.html'),
+                            load('agenda-2017-11', 'agendas/2017-11.html')]);
     }
 
-    function loadNewslettersAndPhotosTabs() {
-        const newsPromise = load('newsletters', 'newsletters.html').then(
-            Promise.all([load('newsletter-2017-10', 'newsletters/2017-10.html'),
-                         load('newsletter-2017-11', 'newsletters/2017-11.html')]
-            )
-        );
-        Promise.all([newsPromise, load('photos', 'photos.html')]).then(() => {
-            lazyload(); // don't want to pass the Promise fulfillment value into lazyload
-        });
+    async function loadNewslettersTab() {
+        await load('newsletters', 'newsletters.html');
+        return Promise.all([load('newsletter-2017-10', 'newsletters/2017-10.html'),
+                            load('newsletter-2017-11', 'newsletters/2017-11.html')]);
+    }
+
+    async function loadNewslettersAndPhotosTabs() {
+        await Promise.all([loadNewslettersTab(), load('photos', 'photos.html')]);
+        lazyload();
     }
 
     function setupAboveFoldContent(){
