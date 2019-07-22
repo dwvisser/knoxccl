@@ -37,15 +37,14 @@ $( function() {
         $('body').on('click', '.switch', function() {
             const match = $(this).attr('class').match(/to-tab-(\w+)/);
             if (match !== null && match.length > 1) {
-            const tab = match[1];
-            $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+                const tab = match[1];
+                $('.nav-tabs a[href="#' + tab + '"]').tab('show');
             }
         });
     }
 
     setupAboveFoldContent();
     loadToElement('about', 'about.html');
-    // $('#about').load('about.html');
     loadMeetingsTab();
     loadNewslettersAndPhotosTabs();
 });
