@@ -6,34 +6,33 @@ require('./main.css');
 
 $( function() {
 
-    async function loadToElement(id, url) {
+    async function load(id, url) {
         const response = await fetch(url);
         const body = await response.text();
         document.getElementById(id).innerHTML = body;
     }
 
     function loadMeetingsTab() {
-        loadToElement('meetings', 'meetings.html').then(() => {
-            loadToElement('2019-feb-forum', 'flyers/2019-Feb-Forum.html');
-            loadToElement('agenda-2017-10', 'agendas/2017-10.html');
-            loadToElement('agenda-2017-11', 'agendas/2017-11.html');
+        load('meetings', 'meetings.html').then(() => {
+            load('2019-feb-forum', 'flyers/2019-Feb-Forum.html');
+            load('agenda-2017-10', 'agendas/2017-10.html');
+            load('agenda-2017-11', 'agendas/2017-11.html');
         });
     }
 
     function loadNewslettersAndPhotosTabs() {
-        const newsPromise = loadToElement('newsletters', 'newsletters.html').then(
-            Promise.all([loadToElement('newsletter-2017-10', 'newsletters/2017-10.html'),
-                         loadToElement('newsletter-2017-11', 'newsletters/2017-11.html')]
+        const newsPromise = load('newsletters', 'newsletters.html').then(
+            Promise.all([load('newsletter-2017-10', 'newsletters/2017-10.html'),
+                         load('newsletter-2017-11', 'newsletters/2017-11.html')]
             )
         );
-        Promise.all([newsPromise,
-                     loadToElement('photos', 'photos.html')]).then(function() {
-            lazyload();
+        Promise.all([newsPromise, load('photos', 'photos.html')]).then(() => {
+            lazyload(); // don't want to pass the Promise fulfillment value into lazyload
         });
     }
 
     function setupAboveFoldContent(){
-        loadToElement('home', 'home.html');
+        load('home', 'home.html');
         $('body').on('click', '.switch', function() {
             const match = $(this).attr('class').match(/to-tab-(\w+)/);
             if (match !== null && match.length > 1) {
@@ -44,7 +43,7 @@ $( function() {
     }
 
     setupAboveFoldContent();
-    loadToElement('about', 'about.html');
+    load('about', 'about.html');
     loadMeetingsTab();
     loadNewslettersAndPhotosTabs();
 });
