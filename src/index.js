@@ -5,27 +5,35 @@ require('lazyload');
 require('./main.css');
 
 $( function() {
+
+    async function loadToElement(id, url) {
+        const response = await fetch(url);
+        const body = await response.text();
+        document.getElementById(id).innerHTML = body;
+    }
+
     function loadMeetingsTab() {
-        $('#meetings').load('meetings.html', function() {
-            $('#2019-feb-forum').load('flyers/2019-Feb-Forum.html');
-            $('#agenda-2017-10').load('agendas/2017-10.html');
-            $('#agenda-2017-11').load('agendas/2017-11.html');
+        loadToElement('meetings', 'meetings.html').then(() => {
+            loadToElement('2019-feb-forum', 'flyers/2019-Feb-Forum.html');
+            loadToElement('agenda-2017-10', 'agendas/2017-10.html');
+            loadToElement('agenda-2017-11', 'agendas/2017-11.html');
         });
     }
 
     function loadNewslettersAndPhotosTabs() {
-        $('#newsletters').load('newsletters.html', function() {
-            $('#newsletter-2017-10').load('newsletters/2017-10.html');
-            $('#newsletter-2017-11').load('newsletters/2017-11.html');
-            $('#photos').load('photos.html', function(){
-                lazyload(); // Calling this after all lazyload images are in DOM.
-            });
+        const newsPromise = loadToElement('newsletters', 'newsletters.html').then(
+            Promise.all([loadToElement('newsletter-2017-10', 'newsletters/2017-10.html'),
+                         loadToElement('newsletter-2017-11', 'newsletters/2017-11.html')]
+            )
+        );
+        Promise.all([newsPromise,
+                     loadToElement('photos', 'photos.html')]).then(function() {
+            lazyload();
         });
     }
 
     function setupAboveFoldContent(){
-        $('#home').load('home.html');
-        $('.top-bottom-links').load('top-bottom-links.html');
+        loadToElement('home', 'home.html');
         $('body').on('click', '.switch', function() {
             const match = $(this).attr('class').match(/to-tab-(\w+)/);
             if (match !== null && match.length > 1) {
@@ -36,7 +44,8 @@ $( function() {
     }
 
     setupAboveFoldContent();
-    $('#about').load('about.html');
+    loadToElement('about', 'about.html');
+    // $('#about').load('about.html');
     loadMeetingsTab();
     loadNewslettersAndPhotosTabs();
 });

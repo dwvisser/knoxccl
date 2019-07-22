@@ -11,7 +11,8 @@
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
         "clean": "rm -rf dist webfonts service-worker.js",
-        "build": "./build.sh",
+        "develop": "./build.sh development",
+        "build": "./build.sh production",
         "serve": "python -m SimpleHTTPServer 3000",
         "deploy": "./sync-s3.sh"
     },

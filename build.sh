@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-npx webpack --mode=production
+npx webpack --mode=$1
 cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist
 mkdir -p webfonts
 cp node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2 webfonts
