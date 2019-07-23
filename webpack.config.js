@@ -41,7 +41,7 @@ module.exports = {
       Popper: ['popper.js', 'default'],
       Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
       Button: "exports-loader?Button!bootstrap/js/dist/button",
-      Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
+      // Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
       // Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
       Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
       // Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
