@@ -30,8 +30,12 @@ $( function() {
         lazyload();
     }
 
+    function logError(e) {
+        console.log(`Error: {e.message}`);
+    }
+
     function setupAboveFoldContent(){
-        load('home', 'home.html');
+        load('home', 'home.html').catch(logError);
         $('body').on('click', '.switch', function() {
             const match = $(this).attr('class').match(/to-tab-(\w+)/);
             if (match !== null && match.length > 1) {
@@ -42,7 +46,7 @@ $( function() {
     }
 
     setupAboveFoldContent();
-    load('about', 'about.html');
-    loadMeetingsTab();
-    loadNewslettersAndPhotosTabs();
+    load('about', 'about.html').catch(logError);
+    loadMeetingsTab().catch(logError);
+    loadNewslettersAndPhotosTabs().catch(logError);
 });
