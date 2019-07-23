@@ -87,7 +87,7 @@ styles:
   carousel: true
   modal: false
   popover: true
-  tooltip: true
+  tooltip: false
 
   # Utility classes
   utilities: true
@@ -103,5 +103,5 @@ scripts:
   popover: true
   scrollspy: false
   tab: true
-  tooltip: true
+  tooltip: false
   util: true
