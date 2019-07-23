@@ -65,7 +65,7 @@ styles:
   type: true
 
   # Components
-  alert: true
+  alert: false
   badge: true
   breadcrumb: true
   button-group: true
@@ -94,7 +94,7 @@ styles:
 
 ### Bootstrap scripts
 scripts:
-  alert: true
+  alert: false
   button: true
   carousel: false
   collapse: false
