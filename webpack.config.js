@@ -44,7 +44,7 @@ module.exports = {
       Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
       Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
       Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
-      Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
+      // Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
       Popover: "exports-loader?Popover!bootstrap/js/dist/popover",
       // Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
       Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
