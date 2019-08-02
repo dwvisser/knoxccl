@@ -14,8 +14,7 @@ $( function() {
 
     async function loadMeetingsTab() {
         await load('meetings', 'meetings.html');
-        return Promise.all([load('2019-feb-forum', 'flyers/2019-Feb-Forum.html'),
-                            load('agenda-2017-10', 'agendas/2017-10.html'),
+        return Promise.all([load('agenda-2017-10', 'agendas/2017-10.html'),
                             load('agenda-2017-11', 'agendas/2017-11.html')]);
     }
 
