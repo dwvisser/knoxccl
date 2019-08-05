@@ -97,7 +97,7 @@ scripts:
   alert: false
   button: true
   carousel: false
-  collapse: false
+  collapse: true  # needed for collabsible navbar, i.e., "hamburger" icon on mobile
   dropdown: true
   modal: false
   popover: false
