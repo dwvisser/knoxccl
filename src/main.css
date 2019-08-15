@@ -139,6 +139,7 @@ ol ol ol {
 
 .tab-pane a {
     color: #723a0c;
+    text-decoration: underline;
 }
 
 a:hover { /* class or pseudo-class + element */
