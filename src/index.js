@@ -46,6 +46,7 @@ $( function() {
 
     setupAboveFoldContent();
     load('about', 'about.html').catch(logError);
+    load('calendar', 'calendar.html').catch(logError);
     loadMeetingsTab().catch(logError);
     loadNewslettersAndPhotosTabs().catch(logError);
 });
