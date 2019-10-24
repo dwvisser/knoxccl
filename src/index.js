@@ -2,7 +2,9 @@ import $ from 'jquery';
 import 'popper.js';
 require('bootstrap-loader');
 require('lazyload');
-require('@fortawesome/fontawesome-free/css/all.css')
+require('@fortawesome/fontawesome-free/css/brands.css');
+require('@fortawesome/fontawesome-free/css/solid.css');
+require('@fortawesome/fontawesome-free/css/fontawesome.css');
 require('./main.css');
 
 $( function() {

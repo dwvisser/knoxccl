@@ -1,5 +1,5 @@
 module.exports = {
-  globDirectory: ".",
+  globDirectory: "dist/",
   globPatterns: [
     "**/*.{html,json,js,css,woff2}"
   ],
@@ -11,7 +11,7 @@ module.exports = {
     "workbox-config.js",
     "webpack.config.js"
   ],
-  swDest: "service-worker.js",
+  swDest: "dist/service-worker.js",
 
   // Define runtime caching rules.
   runtimeCaching: [{

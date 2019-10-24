@@ -3,19 +3,36 @@
 Files for the Citizens' Climate Lobby chapter site in Knoxville, TN. Visit the
 website at [knoxccl.org](http://knoxccl.org).
 
-I use WebPack to bundle JavaScript libraries for the page, and Google's Workbox utility to
-generate the `service-worker.js` file. Execute the followingcommands to deploy:
- 
-    npx webpack --mode=production
-    workbox generateSW workbox-config.js
+NPM and WebPack are used to bundle JavaScript and CSS libraries for the page. There are
+several `npm run` targets at your disposal:
 
-Note: the `test-server.sh` runs these 2 commands for you.
+* clean - Uses `git clean -x` to clean up the development folder. **WARNING**: If you are adding
+  a source file that isn't yet staged, it *will* be removed, too.
+* **develop** - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
+  debugging.
+* **build** - Same as 'develop', but optimizing for deployment.
+* **deploy** - runs `./sync-s3.sh` to push files to server (see section below)
+* start - launches the WebPack dev server for local browsing/testing
+* watch - invokes `webpack --watch` for automatic rebuilding during editing
+* **serve** - launches the Python 3 static web server from the `dist/` folder
 
-Now, `dist/index.js` and `service-worker.js` will be up to date with the source code. If
-satisfied, then this is a good time to `git commit` and `git push`. The following command will
-push the files to AWS Simple Storage Service:
+Targets in **bold** *must* be run from the project base.
 
-    ./sync-s3.sh
+## Building and Deploying
+
+    > npm run clean
+    > npm run build
+
+Now, `dist/index.js` and `dist/service-worker.js` will be up to date with the source code, and
+many other assets will be created in `dist/` as well. If satisfied, then this is a good time to
+`git commit` and `git push`. The following command will push the files to AWS Simple Storage
+Service:
+
+    > ./sync-s3.sh
+
+or:
+
+    > npm run deploy
 
 The script will tell you what you need to do to create the appropriate invalidations on
 CloudFront. In order to make sure that users always pull up the latest site version:

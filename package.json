@@ -10,13 +10,13 @@
     },
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
-        "clean": "rm -rf dist webfonts service-worker.js",
-        "develop": "./build.sh development",
-        "build": "./build.sh production",
-        "serve": "python -m SimpleHTTPServer 3000",
+        "clean": "git clean -x -f",
+        "develop": "webpack --mode=development && workbox generateSW workbox-config.js",
+        "build": "webpack --mode=production && workbox generateSW workbox-config.js",
         "deploy": "./sync-s3.sh",
         "start": "webpack-dev-server --open",
-        "watch": "webpack --watch"
+        "watch": "webpack --watch",
+        "serve": "cd dist && python3 -m http.server 3000"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
