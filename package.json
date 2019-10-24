@@ -14,7 +14,9 @@
         "develop": "./build.sh development",
         "build": "./build.sh production",
         "serve": "python -m SimpleHTTPServer 3000",
-        "deploy": "./sync-s3.sh"
+        "deploy": "./sync-s3.sh",
+        "start": "webpack-dev-server --open",
+        "watch": "webpack --watch"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
@@ -31,6 +33,7 @@
         "url-loader": "^1.1.2",
         "webpack": "^4.0.0",
         "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.9.0",
         "workbox-webpack-plugin": "^4.0.0"
     },
     "dependencies": {

@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
+# $1 is 'development' or 'production'
 npx webpack --mode=$1
-cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist
-mkdir -p webfonts
-cp node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2 webfonts
-cp node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 webfonts
 workbox generateSW workbox-config.js
