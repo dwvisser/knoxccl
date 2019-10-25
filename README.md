@@ -6,13 +6,12 @@ website at [knoxccl.org](http://knoxccl.org).
 NPM and WebPack are used to bundle JavaScript and CSS libraries for the page. There are
 several `npm run` targets at your disposal:
 
-* clean - Removes the `dist` build folder and its contents
-  (The `-X` means remove all files ignored by Git.)
+* clean - Removes the `dist` build folder and its contents.
 * develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
   debugging.
 * build - Same as 'develop', but optimizing for deployment.
-* deploy - runs `./sync-s3.sh` to sync `dist` folder with the AWS S3 bucket (more info below)
-* serve - launches a local static content web server from the `dist/` folder
+* deploy - Runs `./sync-s3.sh` to sync `dist` folder with the AWS S3 bucket (more info below).
+* serve - Launches a local static content web server from the `dist/` folder.
 
 NOTE: `deploy` will set the current working directory (CWD) to be the project base folder.
 Similarly, `serve` will set the CWD to the `/dist` subfolder.
