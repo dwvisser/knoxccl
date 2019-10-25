@@ -13,8 +13,7 @@ several `npm run` targets at your disposal:
 * deploy - Runs `./sync-s3.sh` to sync `dist` folder with the AWS S3 bucket (more info below).
 * serve - Launches a local static content web server from the `dist/` folder.
 
-NOTE: `deploy` will set the current working directory (CWD) to be the project base folder.
-Similarly, `serve` will set the CWD to the `/dist` subfolder.
+NOTE: `serve` will set the current working directory (CWD) to be the `/dist` subfolder.
 
 There are also these additional targets:
 
