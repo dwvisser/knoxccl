@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -53,6 +54,28 @@ module.exports = {
       Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
       // Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
       Util: "exports-loader?Util!bootstrap/js/dist/util",
+    }),
+    new WorkboxPlugin.GenerateSW({
+      swDest: "service-worker.js",
+
+      // Define runtime caching rules.
+      runtimeCaching: [{
+        urlPattern: /\.(?:png|jpg|jpeg|svg|pdf)$/i,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'images-and-docs', // Use a custom cache name.
+          expiration: {
+            maxEntries: 100,
+          },
+        },
+      }],
+      // See https://developers.google.com/web/tools/workbox/modules/workbox-build#full_generatesw_config
+      // The following 2 options force kicking out the old ServiceWorker and activating the
+      // new one on all client tabs as soon as the new ServiceWorker is installed. It is an
+      // anti-pattern for PWAs in general (see https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68),
+      // but for this simple "static" site I would rather users always see the latest content.
+      skipWaiting: true,
+      clientsClaim: true
     })
   ]
 };

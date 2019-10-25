@@ -11,8 +11,8 @@
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
         "clean": "git clean -x -f",
-        "develop": "webpack --mode=development && workbox generateSW workbox-config.js",
-        "build": "webpack --mode=production && workbox generateSW workbox-config.js",
+        "develop": "webpack --mode=development",
+        "build": "webpack --mode=production",
         "deploy": "./sync-s3.sh",
         "start": "webpack-dev-server --open",
         "watch": "webpack --watch",
@@ -34,7 +34,7 @@
         "webpack": "^4.0.0",
         "webpack-cli": "^3.3.0",
         "webpack-dev-server": "^3.9.0",
-        "workbox-webpack-plugin": "^4.0.0"
+        "workbox-webpack-plugin": "^4.3.1"
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
