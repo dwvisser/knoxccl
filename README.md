@@ -8,15 +8,23 @@ several `npm run` targets at your disposal:
 
 * clean - Uses `git clean -X -f` to clean up all build artifacts from the development folder
   (The `-X` means remove all files ignored by Git.)
-* **develop** - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
+* develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
   debugging.
-* **build** - Same as 'develop', but optimizing for deployment.
-* **deploy** - runs `./sync-s3.sh` to push files to server (see section below)
+* build - Same as 'develop', but optimizing for deployment.
+* deploy - runs `./sync-s3.sh` to push files to server (see section below)
+* serve - launches the Python 3 static web server from the `dist/` folder
+
+NOTE: `deploy` will set the current working directory (CWD) to be the project base folder.
+Similarly, `serve` will set the CWD to the `/dist` subfolder.
+
+There are also these additional targets:
+
 * start - launches the WebPack dev server for local browsing/testing
 * watch - invokes `webpack --watch` for automatic rebuilding during editing
-* **serve** - launches the Python 3 static web server from the `dist/` folder
 
-Targets in **bold** *must* be run from the project base.
+WARNING: `start` and `watch` aren't yet trustworthy. They don't appear to do the Workbox step.
+At present, I trust explicit `build` or `deploy` followed by `serve`, which is a more
+trustworthy test of the website as it will be served from AWS.
 
 ## Building and Deploying
 

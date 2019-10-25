@@ -13,10 +13,10 @@
         "clean": "git clean -X -f",
         "develop": "webpack --mode=development",
         "build": "webpack --mode=production",
-        "deploy": "./sync-s3.sh",
+        "deploy": "cd `git rev-parse --show-toplevel` && ./sync-s3.sh",
+        "serve": "cd `git rev-parse --show-toplevel`/dist && python3 -m http.server 3000",
         "start": "webpack-dev-server --open",
-        "watch": "webpack --watch",
-        "serve": "cd dist && python3 -m http.server 3000"
+        "watch": "webpack --watch"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
