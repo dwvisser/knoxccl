@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -55,6 +56,9 @@ module.exports = {
       // Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
       Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
+    new CopyPlugin([
+      {from: 'static', ignore: ['*.xcf', '*.xbs'] }
+    ]),
     new WorkboxPlugin.GenerateSW({
       swDest: "service-worker.js",
 

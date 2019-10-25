@@ -10,7 +10,7 @@
     },
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
-        "clean": "git clean -X -f",
+        "clean": "cd `git rev-parse --show-toplevel` && rm -rf dist",
         "develop": "webpack --mode=development",
         "build": "webpack --mode=production",
         "deploy": "cd `git rev-parse --show-toplevel` && ./sync-s3.sh",
@@ -21,6 +21,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
         "bootstrap-loader": "^3.0.4",
+        "copy-webpack-plugin": "^5.0.4",
         "css-loader": "^2.1.1",
         "exports-loader": "^0.7.0",
         "file-loader": "^3.0.1",

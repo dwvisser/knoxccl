@@ -2,10 +2,4 @@
 dat.json
 node_modules
 service-worker.js
-*.eot
-*.ttf
-*.woff
-*.woff2
-dist/*.jpg
-dist/*.js
-dist/*.svg
+dist/

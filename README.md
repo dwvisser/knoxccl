@@ -6,13 +6,13 @@ website at [knoxccl.org](http://knoxccl.org).
 NPM and WebPack are used to bundle JavaScript and CSS libraries for the page. There are
 several `npm run` targets at your disposal:
 
-* clean - Uses `git clean -X -f` to clean up all build artifacts from the development folder
+* clean - Removes the `dist` build folder and its contents
   (The `-X` means remove all files ignored by Git.)
 * develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
   debugging.
 * build - Same as 'develop', but optimizing for deployment.
-* deploy - runs `./sync-s3.sh` to push files to server (see section below)
-* serve - launches the Python 3 static web server from the `dist/` folder
+* deploy - runs `./sync-s3.sh` to sync `dist` folder with the AWS S3 bucket (more info below)
+* serve - launches a local static content web server from the `dist/` folder
 
 NOTE: `deploy` will set the current working directory (CWD) to be the project base folder.
 Similarly, `serve` will set the CWD to the `/dist` subfolder.
@@ -31,14 +31,18 @@ trustworthy test of the website as it will be served from AWS.
     > npm run clean
     > npm run build
 
-Now, `dist/index.js` and `dist/service-worker.js` will be up to date with the source code, and
-many other assets will be created in `dist/` as well. If satisfied, then this is a good time to
-`git commit` and `git push`. The following command will push the files to AWS Simple Storage
-Service:
+The `dist` build folder will be removed by the first command, and re-built by the second
+command. You can then try a local version of the site with:
 
-    > ./sync-s3.sh
+    > npm run serve
 
-or:
+If the site is ready for deployment, commit the changes to Git.
+
+    > git add […]
+    > git commit
+    > git push
+
+The following command will push the files to AWS Simple Storage:
 
     > npm run deploy
 
@@ -51,7 +55,7 @@ CloudFront. In order to make sure that users always pull up the latest site vers
   sync script fails to do this, so an `aws s3 cp` command must be done), and invalidated for
   pretty much any site changes.
 
-## Whenever an update is made to the web site…
+## To Publicize Significant Site Changes…
 
 Make sure to update (or have someone else update) in these other places, too, where
 appropriate.
