@@ -10,7 +10,7 @@
     },
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
-        "clean": "git clean -x -f",
+        "clean": "git clean -X -f",
         "develop": "webpack --mode=development",
         "build": "webpack --mode=production",
         "deploy": "./sync-s3.sh",

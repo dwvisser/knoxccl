@@ -6,8 +6,8 @@ website at [knoxccl.org](http://knoxccl.org).
 NPM and WebPack are used to bundle JavaScript and CSS libraries for the page. There are
 several `npm run` targets at your disposal:
 
-* clean - Uses `git clean -x` to clean up the development folder. **WARNING**: If you are adding
-  a source file that isn't yet staged, it *will* be removed, too.
+* clean - Uses `git clean -X -f` to clean up all build artifacts from the development folder
+  (The `-X` means remove all files ignored by Git.)
 * **develop** - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
   debugging.
 * **build** - Same as 'develop', but optimizing for deployment.
@@ -43,7 +43,7 @@ CloudFront. In order to make sure that users always pull up the latest site vers
   sync script fails to do this, so an `aws s3 cp` command must be done), and invalidated for
   pretty much any site changes.
 
-## Whenever an update is made to the web site...
+## Whenever an update is made to the web site…
 
 Make sure to update (or have someone else update) in these other places, too, where
 appropriate.
