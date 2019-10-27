@@ -10,19 +10,26 @@ several `npm run` targets at your disposal:
 * develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
   debugging.
 * build - Same as 'develop', but optimizing for deployment.
-* deploy - Runs `./sync-s3.sh` to sync `dist` folder with the AWS S3 bucket (more info below).
+* deploy - Prints a message about how to deploy. We're using AWS Amplify, pointed at the
+  `master` branch on AWS CodeCommit, so any push to that branch results in a build in AWS,
+  with deploy to the Amplify CDN upon successful build.
 * serve - Launches a local static content web server from the `dist/` folder.
-
-NOTE: `serve` will set the current working directory (CWD) to be the `/dist` subfolder.
 
 There are also these additional targets:
 
 * start - launches the WebPack dev server for local browsing/testing
 * watch - invokes `webpack --watch` for automatic rebuilding during editing
 
-WARNING: `start` and `watch` aren't yet trustworthy. They don't appear to do the Workbox step.
-At present, I trust explicit `build` or `deploy` followed by `serve`, which is a more
-trustworthy test of the website as it will be served from AWS.
+WARNING: `npm run start` and `npm run watch` aren't yet trustworthy. They don't appear to do
+the Workbox step. At present, I trust explicit `npm run build` or `npm run develop` followed by
+`npm run serve`, which is a more trustworthy test of the website as it will be served from AWS.
+
+## Making Changes
+
+In general, work in feature branches, or the `develop` branch. The `master` branch is special.
+Whenever changes are pushed to `master` on the AWS CodeCommit repository, a new version of the
+website is build on AWS infrastructure, and deployed to the AWS Amplify CDN (if build was
+successful).
 
 ## Building and Deploying
 
@@ -40,18 +47,10 @@ If the site is ready for deployment, commit the changes to Git.
     > git commit
     > git push
 
-The following command will push the files to AWS Simple Storage:
-
-    > npm run deploy
-
 The script will tell you what you need to do to create the appropriate invalidations on
-CloudFront. In order to make sure that users always pull up the latest site version:
-
-* It is very important that whenever `index.html` changes, to invalidate both `/` and
-  `/index.html`.
-* The `service-worker.js` file needs to be updated (see above), copied to S3 (sometimes the
-  sync script fails to do this, so an `aws s3 cp` command must be done), and invalidated for
-  pretty much any site changes.
+CloudFront. Remember, while it is good to "backup" by pushing `develop` and feature branches,
+only pushes to the `master` branch on the AWS Code Commit repository will result in the website
+being redeployed/updated.
 
 ## To Publicize Significant Site Changes…
 
