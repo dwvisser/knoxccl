@@ -3,8 +3,9 @@
 Files for the Citizens' Climate Lobby chapter site in Knoxville, TN. Visit the
 website at [knoxccl.org](http://knoxccl.org).
 
-NPM and WebPack are used to bundle JavaScript and CSS libraries for the page. There are
-several `npm run` targets at your disposal:
+[NPM](https://docs.npmjs.com/about-npm/) and [WebPack](https://webpack.js.org) are used to
+bundle JavaScript and CSS libraries for the page. There are several `npm run` targets at your
+disposal:
 
 * clean - Removes the `dist` build folder and its contents.
 * develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
@@ -30,6 +31,27 @@ In general, work in feature branches, or the `develop` branch. The `master` bran
 Whenever changes are pushed to `master` on the AWS CodeCommit repository, a new version of the
 website is build on AWS infrastructure, and deployed to the AWS Amplify CDN (if build was
 successful).
+
+### Source Structure
+
+* `README.md` - this file
+* `package.json` - NPM dependencies, see
+  [docs.npmjs.com](https://docs.npmjs.com/creating-a-package-json-file)
+* `package-lock.json` - describes exact dependency installations at a point in time; see
+  [docs.npmjs.com](https://docs.npmjs.com/files/package-lock.json)
+* `webpack.config.js` - Defines the WebPack build process
+* `postcss.config.js` - seems to be necessary for CSS loader, initially set to empty config
+* `.booststraprc` - Used to configure `bootstrap-loader` and include only what is needed by the
+  site
+* `serve.sh` - Helpful script for launching a static HTTP server for local testing
+* `src/` - Files that are processed by WebPack build processes to generate output in `dist/`.
+* `src/index.js` - The WebPack entry point
+* `static/` - Static content files that get copied, unmodified, by WebPack into dist.
+
+In addition, these folders are generated when building the site and are `.gitignore`'d:
+
+* `dist/` - Where WebPack builds the working static site.
+* `node_modules/` - Where all NPM dependences are placed
 
 ## Building and Deploying
 
