@@ -146,6 +146,25 @@ ol ol ol {
     padding: 4rem 1rem 1rem;
 }
 
+.dark-theme .jumbotron { /* From Bootstrap */
+    /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
+     * Darken the background image for contrast. */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url("images/low_smoky-mountains-1379552973wwG.jpg");
+
+    /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        image-set(
+            url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+            url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+    );
+    background-position: bottom center;
+    background-size: cover;
+    color: white;
+    letter-spacing: 1px;
+    padding: 4rem 1rem 1rem;
+}
+
 .top-and-bottom {
     background-color: rgb(67,106,87);
 }
@@ -169,6 +188,10 @@ a:hover { /* class or pseudo-class + element */
 
 a:visited {
     color: #2c4464;
+}
+
+.dark-theme a:visited {
+    color: lightseagreen;
 }
 
 .top-and-bottom a {

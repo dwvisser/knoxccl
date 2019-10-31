@@ -60,10 +60,14 @@ $( function() {
             body.classList.remove('dark-theme');
         }
 
+        // Remember the user's last color scheme choice
+        toggle.setAttribute('permanent', '');
+
         // Listen for toggle changes (which includes `prefers-color-scheme` changes)
         // and toggle the `dark` class accordingly.
         toggle.addEventListener('colorschemechange', () => {
             body.classList.toggle('dark-theme', toggle.mode === 'dark');
+            // TODO add code to change Google Calendar embed to use bgcolor=%23616161
         });
     }
 
