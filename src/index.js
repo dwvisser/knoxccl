@@ -67,7 +67,6 @@ $( function() {
         // and toggle the `dark` class accordingly.
         toggle.addEventListener('colorschemechange', () => {
             body.classList.toggle('dark-theme', toggle.mode === 'dark');
-            // TODO add code to change Google Calendar embed to use bgcolor=%23616161
         });
     }
 
