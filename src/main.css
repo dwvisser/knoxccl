@@ -1,12 +1,28 @@
 /* Color pallete: http://www.colourlovers.com/palette/1827183/Lights */
 
-/* For my own learning, I'm organizing this CSS from lowest priority to
-   highest. ID rules get highest. # of classes/pseudo-classes specified
-   determines ordering after that, and # of elements specified is the final
-   determiner of order. */
+:root {
+    color-scheme: light dark;
+}
 
-/* Lowest priority: elements */
+dark-mode-toggle {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
 
+.dark-theme {
+    color: white;
+    background-color: black;
+}
+
+.dark-theme img {
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dark-theme img:hover {
+    opacity: 1;
+}
 
 .nav-tabs .nav-link {
     border-color: #3e8ad3;
@@ -130,6 +146,25 @@ ol ol ol {
     padding: 4rem 1rem 1rem;
 }
 
+.dark-theme .jumbotron { /* From Bootstrap */
+    /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
+     * Darken the background image for contrast. */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url("images/low_smoky-mountains-1379552973wwG.jpg");
+
+    /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        image-set(
+            url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+            url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+    );
+    background-position: bottom center;
+    background-size: cover;
+    color: white;
+    letter-spacing: 1px;
+    padding: 4rem 1rem 1rem;
+}
+
 .top-and-bottom {
     background-color: rgb(67,106,87);
 }
@@ -153,6 +188,10 @@ a:hover { /* class or pseudo-class + element */
 
 a:visited {
     color: #2c4464;
+}
+
+.dark-theme a:visited {
+    color: lightseagreen;
 }
 
 .top-and-bottom a {
