@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'popper.js';
 require('bootstrap-loader');
+require('dark-mode-toggle');
 require('lazyload');
 require('@fortawesome/fontawesome-free/css/brands.css');
 require('@fortawesome/fontawesome-free/css/solid.css');
@@ -37,6 +38,7 @@ $( function() {
     }
 
     function setupAboveFoldContent(){
+        setUpDarkModeToggle();
         load('home', 'home.html').catch(logError);
         $('body').on('click', '.switch', function() {
             const match = $(this).attr('class').match(/to-tab-(\w+)/);
@@ -44,6 +46,24 @@ $( function() {
                 const tab = match[1];
                 $('.nav-tabs a[href="#' + tab + '"]').tab('show');
             }
+        });
+    }
+
+    function setUpDarkModeToggle(){
+        const toggle = document.querySelector('dark-mode-toggle');
+        const body = document.body;
+
+        // Set or remove the `dark` class the first time.
+        if (toggle.mode === 'dark') {
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+        }
+
+        // Listen for toggle changes (which includes `prefers-color-scheme` changes)
+        // and toggle the `dark` class accordingly.
+        toggle.addEventListener('colorschemechange', () => {
+            body.classList.toggle('dark-theme', toggle.mode === 'dark');
         });
     }
 

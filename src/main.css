@@ -1,12 +1,28 @@
 /* Color pallete: http://www.colourlovers.com/palette/1827183/Lights */
 
-/* For my own learning, I'm organizing this CSS from lowest priority to
-   highest. ID rules get highest. # of classes/pseudo-classes specified
-   determines ordering after that, and # of elements specified is the final
-   determiner of order. */
+:root {
+    color-scheme: light dark;
+}
 
-/* Lowest priority: elements */
+dark-mode-toggle {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
 
+.dark-theme {
+    color: white;
+    background-color: black;
+}
+
+.dark-theme img {
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dark-theme img:hover {
+    opacity: 1;
+}
 
 .nav-tabs .nav-link {
     border-color: #3e8ad3;
