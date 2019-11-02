@@ -31,6 +31,10 @@ dark-mode-toggle {
     transition: opacity 0.5s ease-in-out;
 }
 
+.dark-theme .jumbotron img {
+    opacity: 1;
+}
+
 .dark-theme img:hover {
     opacity: 1;
 }
