@@ -209,6 +209,14 @@ a:visited {
     color: lightseagreen;
 }
 
+.navbar a.dropdown-item:visited {
+    color: #a0cbec;
+}
+
+.navbar a.navbar-brand:visited {
+    color: white;
+}
+
 .top-and-bottom a {
     color:white;
 }
