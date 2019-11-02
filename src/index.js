@@ -1,7 +1,11 @@
 import $ from 'jquery';
 import 'popper.js';
 require('bootstrap-loader');
-require('dark-mode-toggle');
+
+if ('customElements' in window) {
+    require('dark-mode-toggle');
+}
+
 require('lazyload');
 require('@fortawesome/fontawesome-free/css/brands.css');
 require('@fortawesome/fontawesome-free/css/solid.css');
