@@ -94,7 +94,7 @@ ol {
     list-style-type: decimal;
 }
 
-#photos img, #home img, #newsletters img {
+#photos img, #home img, #newsletters img, #meetings img {
     width: 100%;
     display: block;
     padding-bottom: 1em;
