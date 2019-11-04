@@ -39,6 +39,10 @@ dark-mode-toggle {
     opacity: 1;
 }
 
+.dark-theme .table {
+    color:lightgreen;
+}
+
 .nav-tabs .nav-link {
     border-color: #3e8ad3;
     color: #9bbccb;
@@ -195,6 +199,10 @@ ol ol ol {
 .tab-pane a {
     color: #723a0c;
     text-decoration: underline;
+}
+
+.dark-theme .tab-pane a {
+    color: gray;
 }
 
 a:hover { /* class or pseudo-class + element */
