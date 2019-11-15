@@ -61,6 +61,7 @@ module.exports = {
     ]),
     new WorkboxPlugin.GenerateSW({
       swDest: "service-worker.js",
+      exclude: [/\.map$/, /^manifest.*\.js$/, /^CNAME$/],
 
       // Define runtime caching rules.
       runtimeCaching: [{
