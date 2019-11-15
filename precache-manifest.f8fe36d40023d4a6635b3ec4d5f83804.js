@@ -36,6 +36,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "9e435847b2aaa201095455c6edcb2e11.png"
   },
   {
+    "revision": "b56d0b81e1bdf447a2742d8ff9b92461",
+    "url": "CNAME"
+  },
+  {
     "url": "a350f80a4977638f0d6d69c964d87454.jpg"
   },
   {
@@ -83,7 +87,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "652c7d6aa1606fdb91f56c86816bb31a",
+    "revision": "d3df65302a5ada6c9dd00179155e1d61",
     "url": "home.html"
   },
   {
@@ -313,6 +317,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ada8389a5968231cbca2b90146b75696",
     "url": "photos/IMG_3955.jpg"
+  },
+  {
+    "revision": "c76cba32b14134f08a05fb927492744f",
+    "url": "photos/se-climate-conference-2018.jpg"
   },
   {
     "revision": "f83adc22c28c9133fb9724e8b4059c85",
