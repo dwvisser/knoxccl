@@ -3,6 +3,19 @@
 Files for the Citizens' Climate Lobby chapter site in Knoxville, TN. Visit the
 website at [knoxccl.org](http://knoxccl.org).
 
+## Contributing
+
+In general, work in feature branches in your own fork. When you are satisfied with your
+changes, create a pull request requesting to merge to `master` on
+[https://github.com/dwvisser/knoxccl-static](dwvisser/knoxccl-static). When the pull request
+is acceptedand merged, a new version of the website is automatically built and deployed on
+GitHub Pages infrastructure.
+
+During development `npm run start`, will keep a development server running which automatically
+reloads whenever changes are saved to the code and markup.
+
+## Development Guide
+
 [NPM](https://docs.npmjs.com/about-npm/) and [WebPack](https://webpack.js.org) are used to
 bundle JavaScript and CSS libraries for the page. There are several `npm run` targets at your
 disposal:
@@ -25,41 +38,36 @@ WARNING: `npm run start` and `npm run watch` aren't yet trustworthy. They don't 
 the Workbox step. At present, I trust explicit `npm run build` or `npm run develop` followed by
 `npm run serve`, which is a more trustworthy test of the website as it will be served from AWS.
 
-## Making Changes
-
-In general, work in feature branches, or the `develop` branch. The `master` branch is special.
-Whenever changes are pushed to `master` on the AWS CodeCommit repository, a new version of the
-website is build on AWS infrastructure, and deployed to the AWS Amplify CDN (if build was
-successful).
-
 ### Source Structure
 
-* `README.md` - this file
+* `.booststraprc` - Used to configure `bootstrap-loader` and include only what is needed by the
+  site
+* `.github/workflows/main.yml` - Specifies the GitHub Actions workflow for building the site.
+* `.gitignore` - What files and folders Git should ignore.
 * `package.json` - NPM dependencies, see
   [docs.npmjs.com](https://docs.npmjs.com/creating-a-package-json-file)
 * `package-lock.json` - describes exact dependency installations at a point in time; see
   [docs.npmjs.com](https://docs.npmjs.com/files/package-lock.json)
-* `webpack.config.js` - Defines the WebPack build process
 * `postcss.config.js` - seems to be necessary for CSS loader, initially set to empty config
-* `.booststraprc` - Used to configure `bootstrap-loader` and include only what is needed by the
-  site
+* `README.md` - this file
 * `serve.sh` - Helpful script for launching a static HTTP server for local testing
 * `src/` - Files that are processed by WebPack build processes to generate output in `dist/`.
 * `src/index.js` - The WebPack entry point
 * `static/` - Static content files that get copied, unmodified, by WebPack into dist.
+* `webpack.config.js` - Defines the WebPack build process
 
 In addition, these folders are generated when building the site and are `.gitignore`'d:
 
 * `dist/` - Where WebPack builds the working static site.
 * `node_modules/` - Where all NPM dependences are placed
 
-## Building and Deploying
+### Local Build and Test
 
     > npm run clean
     > npm run build
 
 The `dist` build folder will be removed by the first command, and re-built by the second
-command. You can then try a local version of the site with:
+command. You can then test the built version of the site with:
 
     > npm run serve
 
@@ -69,10 +77,9 @@ If the site is ready for deployment, commit the changes to Git.
     > git commit
     > git push
 
-The script will tell you what you need to do to create the appropriate invalidations on
-CloudFront. Remember, while it is good to "backup" by pushing `develop` and feature branches,
-only pushes to the `master` branch on the AWS Code Commit repository will result in the website
-being redeployed/updated.
+Remember, while it is good to "backup" by pushing `develop` and feature branches,
+only pushes to the `master` branch on the main repository will result in the website being
+redeployed/updated.
 
 ## To Publicize Significant Site Changes…
 
