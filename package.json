@@ -19,7 +19,7 @@
         "watch": "webpack --watch"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.8.1",
+        "@fortawesome/fontawesome-free": "^5.11.2",
         "bootstrap-loader": "^3.0.4",
         "copy-webpack-plugin": "^5.0.4",
         "css-loader": "^2.1.1",

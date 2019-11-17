@@ -7,11 +7,11 @@ website at [knoxccl.org](http://knoxccl.org).
 
 In general, work in feature branches in your own fork. When you are satisfied with your
 changes, create a pull request requesting to merge to `master` on
-[https://github.com/dwvisser/knoxccl-static](dwvisser/knoxccl-static). When the pull request
-is acceptedand merged, a new version of the website is automatically built and deployed on
+[https://github.com/dwvisser/knoxccl](dwvisser/knoxccl). When the pull request
+is accepted and merged, a new version of the website is automatically built and deployed on
 GitHub Pages infrastructure.
 
-During development `npm run start`, will keep a development server running which automatically
+During development `npm start`, will keep a development server running which automatically
 reloads whenever changes are saved to the code and markup.
 
 ## Development Guide
@@ -63,6 +63,9 @@ In addition, these folders are generated when building the site and are `.gitign
 
 ### Local Build and Test
 
+Before creating a pull request, make sure to create a production build, and serve it locally,
+as a final sanity check.
+
     > npm run clean
     > npm run build
 
@@ -71,7 +74,8 @@ command. You can then test the built version of the site with:
 
     > npm run serve
 
-If the site is ready for deployment, commit the changes to Git.
+The above command depends on having Python 3 installed (most Linux distributions do). If the
+site is ready for deployment, commit the changes to Git.
 
     > git add […]
     > git commit
