@@ -91,7 +91,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "196a78f0fdae19a3de29dccfeca90db3",
+    "revision": "8f61b7dbe010c946f5da47da7e211797",
     "url": "home.html"
   },
   {
@@ -141,6 +141,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a88f0d280c7a4e10a7eeaf38aa2ce099",
     "url": "images/ccl-logo.svg"
+  },
+  {
+    "revision": "0fbc87209655925172727d910bae76c3",
+    "url": "images/se-conference-2020-Flyer.jpg"
   },
   {
     "revision": "71ef2c82e68246f6e83b9e56aac9e05f",
