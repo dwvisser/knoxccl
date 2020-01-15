@@ -33,6 +33,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "9e435847b2aaa201095455c6edcb2e11.png"
   },
   {
+    "revision": "ee7476a82af2fc6c979fbcfcf90971ec",
+    "url": "Downtown_Walking_Map.pdf"
+  },
+  {
     "url": "a350f80a4977638f0d6d69c964d87454.jpg"
   },
   {
@@ -59,7 +63,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2018-01.pdf"
   },
   {
-    "revision": "6b99dd093d377da1607759f75e411301",
+    "revision": "d3f415788de7969f67a8110650018fd3",
     "url": "agendas/2020-01.docx"
   },
   {
@@ -87,7 +91,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "2fe9ab3a6a3f50685ef0bd7f9d601697",
+    "revision": "196a78f0fdae19a3de29dccfeca90db3",
     "url": "home.html"
   },
   {
