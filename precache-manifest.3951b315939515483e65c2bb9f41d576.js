@@ -95,7 +95,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "b54b027c8da3e746d5fce610420b673c",
+    "revision": "c51bb97ea68e57897676525fe42afbed",
     "url": "home.html"
   },
   {
@@ -187,7 +187,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "newsletters/2017-11.html"
   },
   {
-    "revision": "a764b1ab50e8aa0d335088e770a83ed5",
+    "revision": "519447749953eb0a532adc85ca1f2bc0",
     "url": "photos.html"
   },
   {
@@ -213,6 +213,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4b07ca9b892f93166125e4ba807b94c9",
     "url": "photos/20190729_195406.jpeg"
+  },
+  {
+    "revision": "76d8ba1cc16ea22f1b5ef4c2f4799d3c",
+    "url": "photos/2020-feb-18-burchett-mtg.jpg"
   },
   {
     "revision": "b01c82dd5e9b3067b6ad6b2ccaa00378",
