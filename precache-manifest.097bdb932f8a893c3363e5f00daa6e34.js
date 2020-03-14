@@ -75,7 +75,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-03.docx"
   },
   {
-    "revision": "f9a83d590438f3fe22d3",
+    "revision": "d5a5768d8ca527859e4c",
     "url": "bundle.js"
   },
   {
@@ -179,7 +179,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "meetings.html"
   },
   {
-    "revision": "edcc15356442581f370e8992a65f9ed0",
+    "revision": "9f887e2395ba0376556d52b0728db989",
     "url": "newsletters.html"
   },
   {
