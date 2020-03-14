@@ -39,6 +39,10 @@ dark-mode-toggle {
     opacity: 1;
 }
 
+.strikethrough {
+    text-decoration-line: line-through;
+}
+
 .table {
     color:lightgreen;
 }
