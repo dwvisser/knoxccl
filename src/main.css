@@ -43,6 +43,14 @@ dark-mode-toggle {
     text-decoration-line: line-through;
 }
 
+.highlight {
+    background-color: yellow;
+}
+
+.dark-theme .highlight {
+    background-color: navy;
+}
+
 .vimeo-container {
     overflow: hidden;
     padding-top: 56.25%;
