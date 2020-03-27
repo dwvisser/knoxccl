@@ -1,311 +1,358 @@
 /* Color pallete: http://www.colourlovers.com/palette/1827183/Lights */
 
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 .responsiveCal {
-    position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
 }
 
 .responsiveCal iframe {
-    position: absolute; top:0; left: 0; width: 100%; height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 dark-mode-toggle {
-    position: absolute;
-    top: 3.8rem;
-    right: 0.5rem;
-    --dark-mode-toggle-light-icon: url("images/sun.png");
-    --dark-mode-toggle-dark-icon: url("images/moon.png");
-    --dark-mode-toggle-icon-size: 2rem;
-    --dark-mode-toggle-label-font: 2rem 'Helvetica';
+  position: absolute;
+  top: 3.8rem;
+  right: 0.5rem;
+  --dark-mode-toggle-light-icon: url("images/sun.png");
+  --dark-mode-toggle-dark-icon: url("images/moon.png");
+  --dark-mode-toggle-icon-size: 2rem;
+  --dark-mode-toggle-label-font: 2rem "Helvetica";
 }
 
 .dark-theme {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 .dark-theme img {
-    opacity: 0.75;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0.75;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .dark-theme .jumbotron img {
-    opacity: 1;
+  opacity: 1;
 }
 
 .dark-theme img:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .strikethrough {
-    text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 .highlight {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .dark-theme .highlight {
-    background-color: navy;
+  background-color: navy;
 }
 
 .vimeo-container {
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
 }
 
 .vimeo-container iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .table {
-    color:lightgreen;
+  color: lightgreen;
 }
 
 #meetings .table {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
     url("images/knox-public-works-render-668px.jpg");
 }
 
 .nav-tabs .nav-link {
-    border-color: #3e8ad3;
-    color: #9bbccb;
-    background-color: #2c4464;
+  border-color: #3e8ad3;
+  color: #9bbccb;
+  background-color: #2c4464;
 }
 
 .nav-tabs .nav-link.active {
-    border-color: #3e8ad3;
-    background-color: #9bbccb;
-    color: #2c4464;
+  border-color: #3e8ad3;
+  background-color: #9bbccb;
+  color: #2c4464;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-    background-color: #9bbccb;
-    color: #2c4464;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  background-color: #9bbccb;
+  color: #2c4464;
 }
 
 .bg-dark {
-    background-color: #2c4464 !important; /* override not ideal */
+  background-color: #2c4464 !important; /* override not ideal */
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #a0cbec;
+  color: #a0cbec;
 }
 
-a.dropdown-item, a.dropdown-item:visited {
-    color: #a0cbec;
+a.dropdown-item,
+a.dropdown-item:visited {
+  color: #a0cbec;
 }
 
 a.dropdown-item:hover {
-    background-color: #9bbccb;
-    color: #2c4464;
+  background-color: #9bbccb;
+  color: #2c4464;
 }
 
-dl, li, p {
-    font-size: 1.2em;
+dl,
+li,
+p {
+  font-size: 1.2em;
 }
 
 blockquote {
-    font-style: italic;
-    margin-left: 2em;
+  font-style: italic;
+  margin-left: 2em;
 }
 
-h1, h2, h3, h4 {
-    font-weight: 400;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
 }
 
 ol {
-    list-style-type: decimal;
+  list-style-type: decimal;
 }
 
-#photos img, #home img, #newsletters img, #meetings img {
-    width: 100%;
-    display: block;
-    padding-bottom: 1em;
+#photos img,
+#home img,
+#newsletters img,
+#meetings img {
+  width: 100%;
+  display: block;
+  padding-bottom: 1em;
 }
 
 ol ol {
-    list-style-type: lower-alpha;
+  list-style-type: lower-alpha;
 }
 
-footer p { /* 2 elements bump priority over one element */
-    color: white;
-    font-size: small;
-    height: 38px;
-    line-height: 45px;
-    vertical-align: middle;
+footer p {
+  /* 2 elements bump priority over one element */
+  color: white;
+  font-size: small;
+  height: 38px;
+  line-height: 45px;
+  vertical-align: middle;
 }
 
 #content-for-tabs .tab-pane h2 {
-    background-color: rgb(129,137,100);
-    color: white;
-    letter-spacing: 1px;
-    padding: 6px;
+  background-color: rgb(129, 137, 100);
+  color: white;
+  letter-spacing: 1px;
+  padding: 6px;
 }
 
 #main-column {
-    border: 1px solid #c5c5c5;
-    border-radius: 0.5em;
+  border: 1px solid #c5c5c5;
+  border-radius: 0.5em;
 }
 
 ol ol ol {
-    list-style-type: lower-roman;
+  list-style-type: lower-roman;
 }
 
 /* Next lowest priority: classes  and pseudo-classes */
 
-
 .white-popup {
   position: relative;
-  background: #FFF;
+  background: #fff;
   padding: 20px;
-  width:auto;
+  width: auto;
   max-width: 500px;
   margin: 20px auto;
 }
 
-.col-md-12 { /* From Bootstrap */
-    float: none;
-    margin: 0 auto;
-    max-width: 700px;
+.col-md-12 {
+  /* From Bootstrap */
+  float: none;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
-.jumbotron { /* From Bootstrap */
-    /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
+.jumbotron {
+  /* From Bootstrap */
+  /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
      * Darken the background image for contrast. */
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
-        url("images/low_smoky-mountains-1379552973wwG.jpg");
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("images/low_smoky-mountains-1379552973wwG.jpg");
 
-    /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
-        image-set(
-            url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
-            url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+  /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    ),
+    image-set(
+      url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+      url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
     );
-    background-position: bottom center;
-    background-size: cover;
-    color: white;
-    letter-spacing: 1px;
-    padding: 4rem 1rem 1rem;
+  background-position: bottom center;
+  background-size: cover;
+  color: white;
+  letter-spacing: 1px;
+  padding: 4rem 1rem 1rem;
 }
 
-.dark-theme .jumbotron { /* From Bootstrap */
-    /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
+.dark-theme .jumbotron {
+  /* From Bootstrap */
+  /* Original image at http://www.publicdomainpictures.net/pictures/60000/velka/smoky-mountains-1379552973wwG.jpg
      * Darken the background image for contrast. */
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-        url("images/low_smoky-mountains-1379552973wwG.jpg");
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("images/low_smoky-mountains-1379552973wwG.jpg");
 
-    /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-        image-set(
-            url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
-            url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
+  /* Save bandwidth on mobile browsers IE/Firefox/Original Edge don't support thus far. */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.8)
+    ),
+    image-set(
+      url("images/smoky-mountains-1379552973wwG_60q_50pc.jpg") 960w,
+      url("images/low_smoky-mountains-1379552973wwG.jpg") 1920w
     );
-    background-position: bottom center;
-    background-size: cover;
-    color: white;
-    letter-spacing: 1px;
-    padding: 4rem 1rem 1rem;
+  background-position: bottom center;
+  background-size: cover;
+  color: white;
+  letter-spacing: 1px;
+  padding: 4rem 1rem 1rem;
 }
 
 .top-and-bottom {
-    background-color: rgb(67,106,87);
+  background-color: rgb(67, 106, 87);
 }
 
 .announcement {
-    background-color: yellow;
-    border-color: goldenrod;
-    border-width: 3px;
-    border-style: solid;
-    margin-bottom: 1em;
+  background-color: yellow;
+  border-color: goldenrod;
+  border-width: 3px;
+  border-style: solid;
+  margin-bottom: 1em;
 }
 
 .tab-pane a {
-    color: #723a0c;
-    text-decoration: underline;
+  color: #723a0c;
+  text-decoration: underline;
 }
 
-.dark-theme .tab-pane a, .table a {
-    color: white;
+.dark-theme .tab-pane a,
+.table a {
+  color: white;
 }
 
-a:hover { /* class or pseudo-class + element */
-    color: #3e8ad3
+a:hover {
+  /* class or pseudo-class + element */
+  color: #3e8ad3;
 }
 
 a:visited {
-    color: #2c4464;
+  color: #2c4464;
 }
 
-.dark-theme a:visited, .table a:visited {
-    color: lightseagreen;
+.dark-theme a:visited,
+.table a:visited {
+  color: lightseagreen;
 }
 
 .navbar a.dropdown-item:visited {
-    color: #a0cbec;
+  color: #a0cbec;
 }
 
 .navbar a.navbar-brand:visited {
-    color: white;
+  color: white;
 }
 
 .top-and-bottom a {
-    color:white;
+  color: white;
 }
 
 .jumbotron a {
-    padding-right: 0.7em;
+  padding-right: 0.7em;
 }
 
-.top-and-bottom a:visited { /* 2 class/pseudoclass + element */
-    color:white;
+.top-and-bottom a:visited {
+  /* 2 class/pseudoclass + element */
+  color: white;
 }
 
 /* Hightest priority: id's */
 
 #news {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
-
 #main-content {
-    padding-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 #announcement button {
-    background-color: goldenrod;
+  background-color: goldenrod;
 }
 
-#banner-links a { /* id + element */
-    text-decoration: none;
+#banner-links a {
+  /* id + element */
+  text-decoration: none;
 }
 
 #tabs-list li {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-#tabs-list li.ui-state-active { /* id + element + class */
-    background: none;
-    border-color: rgb(221,234,165);
+#tabs-list li.ui-state-active {
+  /* id + element + class */
+  background: none;
+  border-color: rgb(221, 234, 165);
 }
 
 #banner-links a:hover {
-    color: rgb(221,234,165);
+  color: rgb(221, 234, 165);
 }
 
-#main-content section a { /* id + 2 elements */
-    color: rgb(67,106,87);
-    font-weight: bold;
+#main-content section a {
+  /* id + 2 elements */
+  color: rgb(67, 106, 87);
+  font-weight: bold;
 }
 
-#tabs-list li.ui-state-active a { /* id + 2 elements + class */
-    background-color: rgb(186,191,133);
+#tabs-list li.ui-state-active a {
+  /* id + 2 elements + class */
+  background-color: rgb(186, 191, 133);
 }
