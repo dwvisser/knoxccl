@@ -79,7 +79,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-04.docx"
   },
   {
-    "revision": "3d388cbfa840d40108d8",
+    "revision": "62028f753840a88a709b",
     "url": "bundle.js"
   },
   {
@@ -103,7 +103,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "deec92874eb9e9bfdaf005a572cd88ac",
+    "revision": "17077cfde8b4d7bc98ba4a1a0dfa01e1",
     "url": "home.html"
   },
   {
@@ -171,7 +171,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/thumbnail.jpg"
   },
   {
-    "revision": "c6bb572ccfefb83e109a84f40cee0916",
+    "revision": "23f1b460323294686ff852473e7b5f46",
     "url": "index.html"
   },
   {
