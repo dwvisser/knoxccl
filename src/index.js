@@ -36,7 +36,7 @@ $(function() {
   }
 
   async function loadNewslettersAndPhotosTabs() {
-    await Promise.all([loadNewslettersTab(), load("photos", "photos.html")]);
+    await Promise.all([loadNewslettersTab(), load("media", "media.html")]);
     lazyload();
   }
 
