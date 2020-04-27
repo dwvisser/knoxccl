@@ -79,7 +79,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-04.docx"
   },
   {
-    "revision": "30bf889dea2dd098c34f",
+    "revision": "e041778c9273da32178a",
     "url": "bundle.js"
   },
   {
@@ -171,7 +171,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/thumbnail.jpg"
   },
   {
-    "revision": "978ffffe402c7d2857dbd4b9820ed33c",
+    "revision": "86ad2c0b5b16cfc97832c7e45da8ede1",
     "url": "index.html"
   },
   {
@@ -393,5 +393,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "03f9c1f360305c1edeb877c8d7301b74",
     "url": "photos/sing2019/_DSC9926.JPG"
+  },
+  {
+    "revision": "818a9c80956cd5a38140b0ab85c4436d",
+    "url": "social.html"
   }
 ]);
