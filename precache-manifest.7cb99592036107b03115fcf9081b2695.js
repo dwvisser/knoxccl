@@ -79,7 +79,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-04.docx"
   },
   {
-    "revision": "39a590a97ef66593bdfa",
+    "revision": "30bf889dea2dd098c34f",
     "url": "bundle.js"
   },
   {
