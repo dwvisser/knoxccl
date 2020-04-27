@@ -35,7 +35,7 @@ $(function() {
     ]);
   }
 
-  async function loadNewslettersAndPhotosTabs() {
+  async function loadNewslettersAndMediaTabs() {
     await Promise.all([loadNewslettersTab(), load("media", "media.html")]);
     lazyload();
   }
@@ -83,5 +83,6 @@ $(function() {
   load("about", "about.html").catch(logError);
   load("calendar", "calendar.html").catch(logError);
   loadMeetingsTab().catch(logError);
-  loadNewslettersAndPhotosTabs().catch(logError);
+  loadNewslettersAndMediaTabs().catch(logError);
+  load("social", "social.html").catch(logError);
 });
