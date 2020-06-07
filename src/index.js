@@ -17,6 +17,8 @@ $(function() {
     const response = await fetch(url);
     const body = await response.text();
     document.getElementById(id).innerHTML = body;
+    $('#jq-version').text($.fn.jquery);
+    $('#bs-version').text($.fn.tab.Constructor.VERSION);
   }
 
   async function loadMeetingsTab() {
