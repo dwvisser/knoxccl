@@ -9,6 +9,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "1ab236ed440ee51810c56bd16628aef0.ttf"
   },
   {
+    "revision": "1a686b54505bfd3ee3c9fc668deb4ae1",
+    "url": "2019-Feb-Flyer.html"
+  },
+  {
     "url": "4d5f8d408b8b6e76563d41689513aaa5.svg"
   },
   {
@@ -183,7 +187,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "media.html"
   },
   {
-    "revision": "b815cf5baadee529600adbbf8eab47e2",
+    "revision": "a4b1a78a0de529c4975563e70c14a716",
     "url": "meetings.html"
   },
   {
