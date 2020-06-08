@@ -43,6 +43,7 @@ module.exports = {
       "window.jQuery": "jquery",
       Tether: "tether",
       "window.Tether": "tether",
+      // NOTE: Popper is needed if we use any of Tooltip, Popover, or Dropdown
       Popper: ['popper.js', 'default'],
       // Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
       Button: "exports-loader?Button!bootstrap/js/dist/button",
