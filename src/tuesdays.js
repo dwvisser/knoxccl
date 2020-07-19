@@ -10,20 +10,20 @@ function thirdTuesday(year, month) {
   return new Date(year, month, firstTuesdayDayOfMonth(year, month) + 14)
 }
 
+function nextMonthThirdTuesday(year, month) {
+    const before_december = month < 11;
+    const nextMonthYear = before_december ? year : year + 1;
+    const nextMonth = before_december ? month + 1 : 1;
+    return thirdTuesday(nextMonthYear, nextMonth);
+  }
+
 function nextThirdTuesday() {
   const now = new Date(Date.now());
-  const nowMonth = now.getMonth();
-  const nowYear = now.getFullYear();
-  const thisMonthThirdTuesday = thirdTuesday(nowYear, nowMonth);
-  return now <= thisMonthThirdTuesday ? thisMonthThirdTuesday :
-    nextMonthThirdTuesday(nowYear, nowMonth);
-}
-
-function nextMonthThirdTuesday(nowYear, nowMonth) {
-  const before_december = nowMonth < 11;
-  const nextYear = before_december ? nowYear : nowYear + 1;
-  const nextMonth = before_december ? nowMonth + 1 : 1;
-  return thirdTuesday(nextYear, nextMonth);
+  const month = now.getMonth();
+  const year = now.getFullYear();
+  const currentMonthThirdTuesday = thirdTuesday(year, month);
+  return now <= currentMonthThirdTuesday ? currentMonthThirdTuesday :
+    nextMonthThirdTuesday(year, month);
 }
 
 exports.nextThirdTuesday = nextThirdTuesday;
