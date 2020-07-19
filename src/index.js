@@ -49,7 +49,9 @@ $(function() {
   async function setupAboveFoldContent() {
     setUpDarkModeToggle();
     await load("home", "home.html").catch(logError);
-    $('#next-meeting-date').text(nextThirdTuesday());
+    const options = {year: "numeric", month: "long", day: "numeric"};
+    const t3 = nextThirdTuesday().toLocaleDateString('en-US', options);
+    $('#next-meeting-date').text(t3);
     $("body").on("click", ".switch", function() {
       const match = $(this)
         .attr("class")
@@ -86,33 +88,30 @@ $(function() {
     const now = new Date(Date.now());
     const nowMonth = now.getMonth();
     const nowYear = now.getFullYear();
-    const thisMonth = thirdTuesday(nowYear, nowMonth);
-    let t3;  // short name for third Tuesday to fit template string on line
-    if (now <= thisMonth) {
-      t3 = thisMonth;
-    } else {
-      const before_december = nowMonth < 11;
-      const nextMonth = before_december ? nowMonth + 1 : 1;
-      const nextYear = before_december ? nowYear : nowYear + 1;
-      t3 = thirdTuesday(nextYear, nextMonth);
+    const thisMonthThirdTuesday = thirdTuesday(nowYear, nowMonth);
+    if (now <= thisMonthThirdTuesday) {
+      return thisMonthThirdTuesday;
     }
-    const options = {year: "numeric", month: "long", day: "numeric"};
-    return t3.toLocaleDateString('en-US', options);
+    const before_december = nowMonth < 11;
+    const nextYear = before_december ? nowYear : nowYear + 1;
+    const nextMonth = before_december ? nowMonth + 1 : 1;
+    return thirdTuesday(nextYear, nextMonth);
   }
 
   function thirdTuesday(year, month) {
-    const tuesday = 2;
-    const first = new Date(year, month, 1);
-    const first_day_of_week = first.getDay();
-    let first_tuesday;
-    if (first_day_of_week == tuesday) {
-      first_tuesday = 1;
-    } else if (first_day_of_week < tuesday) {
-      first_tuesday = 1 + tuesday - first_day_of_week;
-    } else {
-      first_tuesday = 6 + first_day_of_week - tuesday;
+    return new Date(year, month, firstTuesdayDayOfMonth(year, month) + 14)
+  }
+
+  function firstTuesdayDayOfMonth(year, month) {
+    const tuesday = 2;  // Date uses Sunday = 0 .. Saturday == 6
+    const first_of_month_weekday = new Date(year, month, 1).getDay();
+    if (first_of_month_weekday == tuesday) {
+      return 1;
     }
-    return new Date(year, month, first_tuesday + 14)
+    if (first_of_month_weekday < tuesday) {
+      return 1 + tuesday - first_of_month_weekday;
+    }
+    return 6 + first_of_month_weekday - tuesday;
   }
 
   setupAboveFoldContent();
