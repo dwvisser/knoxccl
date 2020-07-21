@@ -17,12 +17,17 @@ function nextMonthThirdTuesday(year, month) {
     return thirdTuesday(nextMonthYear, nextMonth);
   }
 
+function todayMidnight() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth());
+}
+
 function nextThirdTuesday() {
-  const now = new Date(Date.now());
-  const month = now.getMonth();
-  const year = now.getFullYear();
+  const today = todayMidnight();
+  const year = today.getFullYear();
+  const month = today.getMonth();
   const currentMonthThirdTuesday = thirdTuesday(year, month);
-  return now <= currentMonthThirdTuesday ? currentMonthThirdTuesday :
+  return today <= currentMonthThirdTuesday ? currentMonthThirdTuesday :
     nextMonthThirdTuesday(year, month);
 }
 
