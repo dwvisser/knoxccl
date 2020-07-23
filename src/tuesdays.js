@@ -19,7 +19,7 @@ function nextMonthThirdTuesday(year, month) {
 
 function todayMidnight() {
   const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth());
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
 function nextThirdTuesday() {
