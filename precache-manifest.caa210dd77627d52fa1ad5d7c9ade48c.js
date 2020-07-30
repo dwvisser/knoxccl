@@ -199,7 +199,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "meetings.html"
   },
   {
-    "revision": "9f887e2395ba0376556d52b0728db989",
+    "revision": "2c81a0b59fad5aad0818eec3e8c21d41",
     "url": "newsletters.html"
   },
   {
