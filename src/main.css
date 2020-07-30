@@ -177,6 +177,10 @@ footer p {
   padding: 6px;
 }
 
+#content-for-tabs .tab-pane > :first-child {
+  padding-top: 1rem;
+}
+
 #main-column {
   border: 1px solid #c5c5c5;
   border-radius: 0.5em;
