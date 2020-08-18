@@ -1,9 +1,11 @@
 function firstTuesdayDayOfMonth(year, month) {
   const tuesday = 2;  // Date uses Sunday = 0 .. Saturday == 6
-  const first_of_month_weekday = new Date(year, month, 1).getDay();
-  const delta = tuesday - first_of_month_weekday;
-  const offset = delta >= 0 ? 1 : 6;
-  return Math.sign(delta) * delta + offset;
+  for (let date = 1; date <= 7; date++) {
+    const weekday = new Date(year, month, date).getDay();
+    if (weekday == tuesday) {
+      return date;
+    }
+  }
 }
 
 function thirdTuesday(year, month) {
