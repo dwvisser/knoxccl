@@ -57,9 +57,13 @@ module.exports = {
       // Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
       Util: "exports-loader?Util!bootstrap/js/dist/util",
     }),
-    new CopyPlugin([
-      {from: 'static', ignore: ['*.xcf', '*.xbs'] }
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: 'static',
+          globOptions: { ignore: ['*.xcf', '*.xbs'] }
+        }
+      ]
+    }),
     new WorkboxPlugin.GenerateSW({
       swDest: "service-worker.js",
       exclude: [/\.map$/, /^manifest.*\.js$/, /^CNAME$/],
