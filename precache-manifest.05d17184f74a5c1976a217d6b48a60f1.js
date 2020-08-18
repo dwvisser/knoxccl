@@ -102,7 +102,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "bea989e82b07e9687c26fc58a4805021.woff"
   },
   {
-    "revision": "dc15776ffc8921ad9f6d",
+    "revision": "e73d66340617d0b4cef2",
     "url": "bundle.js"
   },
   {
@@ -189,6 +189,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e24f8bd6fefe481c67e9691747576251",
     "url": "images/thumbnail.jpg"
+  },
+  {
+    "revision": "f9e788099d1abfb2025bc56ab5c30dc3",
+    "url": "images/thumbnail.xcf"
   },
   {
     "revision": "7cde7a6b6c5bc5f8e8d1ee47dc3fe594",
@@ -413,6 +417,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "03f9c1f360305c1edeb877c8d7301b74",
     "url": "photos/sing2019/_DSC9926.JPG"
+  },
+  {
+    "revision": "62ce9eadc5cd57dda58f69db1ac53a6c",
+    "url": "photos/xnconvert_reduce.xbs"
   },
   {
     "revision": "818a9c80956cd5a38140b0ab85c4436d",
