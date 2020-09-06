@@ -195,7 +195,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/thumbnail.xcf"
   },
   {
-    "revision": "7cde7a6b6c5bc5f8e8d1ee47dc3fe594",
+    "revision": "5278b89ea6b30922304d654105778bdb",
     "url": "index.html"
   },
   {
