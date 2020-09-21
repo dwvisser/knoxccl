@@ -44,7 +44,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "a350f80a4977638f0d6d69c964d87454.jpg"
   },
   {
-    "revision": "19fae888aff0ccd6992ac778082622c4",
+    "revision": "77f30b681e5683966eec485bb2c59e1c",
     "url": "about.html"
   },
   {
@@ -123,7 +123,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "google0415419d4f72884c.html"
   },
   {
-    "revision": "87bf04a7ecfa29788d2293ef5025a0cf",
+    "revision": "db2af3a2e5028bfd7e7d95141c903dc8",
     "url": "home.html"
   },
   {
