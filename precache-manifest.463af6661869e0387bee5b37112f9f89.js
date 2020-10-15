@@ -96,6 +96,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-08.docx"
   },
   {
+    "revision": "a7b5118e1cc832ff1a5e62a9ed0529f7",
+    "url": "agendas/2020-09.docx"
+  },
+  {
+    "revision": "f9274f82ec42d38af2deedafe727a88c",
+    "url": "agendas/2020-10.docx"
+  },
+  {
     "url": "b15db15f746f29ffa02638cb455b8ec0.woff2"
   },
   {
@@ -207,7 +215,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "media.html"
   },
   {
-    "revision": "7a9644a01ae38d9fb59c35a24ffc236d",
+    "revision": "59391bb1ef3ad74925edf38270c89087",
     "url": "meetings.html"
   },
   {
