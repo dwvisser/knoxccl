@@ -15,7 +15,7 @@ function thirdTuesday(year, month) {
 function nextMonthThirdTuesday(year, month) {
     const before_december = month < 11;
     const nextMonthYear = before_december ? year : year + 1;
-    const nextMonth = before_december ? month + 1 : 1;
+    const nextMonth = before_december ? month + 1 : 0;
     return thirdTuesday(nextMonthYear, nextMonth);
   }
 
