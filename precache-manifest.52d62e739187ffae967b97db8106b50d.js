@@ -104,6 +104,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "agendas/2020-10.docx"
   },
   {
+    "revision": "877e2e04109641214625557b12863466",
+    "url": "agendas/2021-01.docx"
+  },
+  {
     "url": "b15db15f746f29ffa02638cb455b8ec0.woff2"
   },
   {
@@ -215,7 +219,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "media.html"
   },
   {
-    "revision": "59391bb1ef3ad74925edf38270c89087",
+    "revision": "6cb48dcdd33c7649c7ade5773eb56394",
     "url": "meetings.html"
   },
   {
