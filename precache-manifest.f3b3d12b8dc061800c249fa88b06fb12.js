@@ -227,7 +227,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "meetings.html"
   },
   {
-    "revision": "6bedd7a5d00a32788da455d500802430",
+    "revision": "9206fc8ec3f966e1c761228cedbfca61",
     "url": "newsletters.html"
   },
   {
@@ -437,6 +437,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "62ce9eadc5cd57dda58f69db1ac53a6c",
     "url": "photos/xnconvert_reduce.xbs"
+  },
+  {
+    "revision": "4a126795af4f4102b4011d3400643cd6",
+    "url": "reports/activities-2020.xlsx"
+  },
+  {
+    "revision": "399aa62cb0235a6e7b6bc92db97b42af",
+    "url": "reports/goals-2020.xlsx"
   },
   {
     "revision": "818a9c80956cd5a38140b0ab85c4436d",
