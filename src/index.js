@@ -45,7 +45,7 @@ $(function() {
   }
 
   function logError(e) {
-    console.log(`Error: {e.message}`);
+    console.error(e);
   }
 
   async function setupAboveFoldContent() {
