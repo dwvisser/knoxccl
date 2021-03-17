@@ -19,8 +19,6 @@ $(function() {
     const response = await fetch(url);
     const body = await response.text();
     document.getElementById(id).innerHTML = body;
-    $('#jq-version').text($.fn.jquery);
-    $('#bs-version').text($.fn.tab.Constructor.VERSION);
   }
 
   async function loadMeetingsTab() {
@@ -49,20 +47,25 @@ $(function() {
   }
 
   async function setupAboveFoldContent() {
-    setUpDarkModeToggle();
-    await load("home", "home.html").catch(logError);
-    const options = {year: "numeric", month: "long", day: "numeric"};
-    const t3 = tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
-    $('#next-meeting-date').text(t3);
-    $("body").on("click", ".switch", function() {
-      const match = $(this)
-        .attr("class")
-        .match(/to-tab-(\w+)/);
-      if (match !== null && match.length > 1) {
-        const tab = match[1];
-        $('.nav-tabs a[href="#' + tab + '"]').tab("show");
-      }
-    });
+    try {
+      setUpDarkModeToggle();
+      await load("home", "home.html").catch(logError);
+      const options = {year: "numeric", month: "long", day: "numeric"};
+      const t3 = tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
+      $('#next-meeting-date').text(t3);
+      $("body").on("click", ".switch", function() {
+        const match = $(this)
+          .attr("class")
+          .match(/to-tab-(\w+)/);
+        if (match !== null && match.length > 1) {
+          const tab = match[1];
+          $('.nav-tabs a[href="#' + tab + '"]').tab("show");
+        }
+      });
+      await loadAboutSection();
+    } catch (e) {
+      logError(e);
+    }
   }
 
   function setUpDarkModeToggle() {
@@ -86,10 +89,13 @@ $(function() {
     });
   }
 
-
+  async function loadAboutSection() {
+      await load("about", "about.html");
+      $('#jq-version').text($.fn.jquery);
+      $('#bs-version').text($.fn.tab.Constructor.VERSION);
+  }
 
   setupAboveFoldContent();
-  load("about", "about.html").catch(logError);
   load("calendar", "calendar.html").catch(logError);
   loadMeetingsTab().catch(logError);
   loadNewslettersAndMediaTabs().catch(logError);
