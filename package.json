@@ -40,7 +40,7 @@
         "workbox-webpack-plugin": "^6.1.2"
     },
     "dependencies": {
-        "bootstrap": "^4.5.0",
+        "bootstrap": "^4.6.0",
         "dark-mode-toggle": "^0.4.11",
         "jquery": "^3.5.0",
         "lazyload": "^2.0.0-rc.2",
