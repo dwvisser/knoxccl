@@ -23,8 +23,9 @@ $(function() {
 
   async function loadMeetingsTab() {
     await load("meetings", "meetings.html");
-    load("agenda-2017-10", "agendas/2017-10.html");
-    load("agenda-2017-11", "agendas/2017-11.html");
+    await Promise.all([load("agenda-2017-10", "agendas/2017-10.html"),
+                       load("agenda-2017-11", "agendas/2017-11.html")]);
+    showTab("meetings");
   }
 
   async function loadNewslettersAndMediaTabs() {
@@ -32,9 +33,11 @@ $(function() {
     await Promise.all([load("newsletters", "newsletters.html"),
                        load("media", "media.html")]);
     lazyload();  // Lazy Load, activate!
+    showTab("media");
     // also, some old content without images
-    load("newsletter-2017-10", "newsletters/2017-10.html");
-    load("newsletter-2017-11", "newsletters/2017-11.html");
+    await Promise.all([load("newsletter-2017-10", "newsletters/2017-10.html"),
+                       load("newsletter-2017-11", "newsletters/2017-11.html")]);
+    showTab("newsletters");
   }
 
   async function setupAboveFoldContent() {
@@ -82,11 +85,20 @@ $(function() {
       $('#bs-version').text($.fn.tab.Constructor.VERSION);
   }
 
+  function showTab(tab_id) {
+    document.getElementById(tab_id+"-tab").style.display = '';
+  }
+
+  async function loadAndShowTab(tab_id, resource) {
+    await load(tab_id, resource);
+    showTab(tab_id);
+  }
+
   async function loadRestOfTabs() {
-    load("calendar", "calendar.html");
+    loadAndShowTab("calendar", "calendar.html");
     loadMeetingsTab();
     loadNewslettersAndMediaTabs();
-    load("social", "social.html");
+    loadAndShowTab("social", "social.html");
   }
 
   async function loadAllContent() {
