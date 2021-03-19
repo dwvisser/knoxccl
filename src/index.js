@@ -1,15 +1,13 @@
 import $ from "jquery";
 import "popper.js";
 require("bootstrap-loader");
+require("bootstrap-icons/font/bootstrap-icons.css");
 
 if ("customElements" in window) {
   require("dark-mode-toggle");
 }
 
 require("lazyload");
-require("@fortawesome/fontawesome-free/css/brands.css");
-require("@fortawesome/fontawesome-free/css/solid.css");
-require("@fortawesome/fontawesome-free/css/fontawesome.css");
 require("./main.css");
 
 const tuesdays = require('./tuesdays');
