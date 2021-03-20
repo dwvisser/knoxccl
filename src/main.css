@@ -29,6 +29,11 @@ dark-mode-toggle {
   --dark-mode-toggle-label-font: 2rem "Helvetica";
 }
 
+#ccl-banner {
+  width: 100%;
+  height: auto;
+}
+
 .dark-theme {
   color: white;
   background-color: black;
