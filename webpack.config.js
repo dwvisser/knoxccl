@@ -4,7 +4,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
   devServer: {
     contentBase: './dist',
     port: 3000
@@ -65,7 +64,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'static',
-          globOptions: { ignore: ['*.xcf', '*.xbs'] }
+          globOptions: { ignore: ['**/*.xcf', '**/*.xbs'] }
         }
       ]
     }),
