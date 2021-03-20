@@ -27,7 +27,9 @@ $(function() {
   }
 
   async function loadNewslettersAndMediaTabs() {
-    // First, load the only files with <img class=lazyload/>
+    // don't bother start loading this until now, but can be async
+    import("lite-vimeo-embed");
+    // Then, load the only files with <img class=lazyload/>
     await Promise.all([load("newsletters", "newsletters.html"),
                        load("media", "media.html")]);
     lazyload();  // Lazy Load, activate!
