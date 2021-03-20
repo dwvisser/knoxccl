@@ -71,6 +71,8 @@ module.exports = {
     new WorkboxPlugin.GenerateSW({
       swDest: "service-worker.js",
       exclude: [/\.map$/, /^manifest.*\.js$/, /^CNAME$/],
+      maximumFileSizeToCacheInBytes: 500000,
+      inlineWorkboxRuntime: false,
 
       // Define runtime caching rules.
       runtimeCaching: [{
