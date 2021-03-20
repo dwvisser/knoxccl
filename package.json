@@ -15,7 +15,7 @@
         "build": "webpack --mode=production",
         "deploy": "echo 'To deploy, push to the 'master' branch in AWS CodeCommit.'",
         "serve": "./serve.sh",
-        "start": "webpack-dev-server --open",
+        "start:dev": "webpack serve",
         "watch": "webpack --watch"
     },
     "devDependencies": {
