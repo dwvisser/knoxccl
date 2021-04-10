@@ -32,6 +32,9 @@ $(function() {
     // Then, load the only files with <img class=lazyload/>
     await Promise.all([load("newsletters", "newsletters.html"),
                        load("media", "media.html")]);
+    // There is a special recent news div in the newsletters tab.
+    document.querySelector('#splash_dest').innerHTML =
+      document.querySelector('#splash_src').innerHTML;
     lazyload();  // Lazy Load, activate!
     showTab("media");
     // also, some old content without images
