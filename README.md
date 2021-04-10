@@ -91,7 +91,5 @@ Make sure to update (or have someone else update) in these other places, too, wh
 appropriate.
 
 * [Facebook](https://www.facebook.com/Citizens-Climate-Lobby-Knoxville-Chapter-159872501112806/)
-* [Meetup.com](https://www.meetup.com/Citizens-Climate-Lobby-Knoxville/)
 * [Google Calendar](https://calendar.google.com/calendar?cid=NWtnc2w2aGl0OG4wMDJraGd0bTVpaW9wazBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-* [Slack](https://knoxccl.slack.com/)
 * [Google Group](https://groups.google.com/forum/#!forum/knoxccl)
