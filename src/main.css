@@ -128,7 +128,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 400;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 ol {
@@ -162,8 +166,6 @@ footer p {
 }
 
 #content-for-tabs .tab-pane h2 {
-  background-color: rgb(129, 137, 100);
-  color: white;
   letter-spacing: 1px;
   padding: 6px;
 }
