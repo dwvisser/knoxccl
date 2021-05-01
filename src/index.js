@@ -32,15 +32,25 @@ $(function() {
     // Then, load the only files with <img class=lazyload/>
     await Promise.all([load("newsletters", "newsletters.html"),
                        load("media", "media.html")]);
-    // There is a special recent news div in the newsletters tab.
-    document.querySelector('#splash_dest').innerHTML =
-      document.querySelector('#splash_src').innerHTML;
+    handleNewslettersSplashDiv();
     lazyload();  // Lazy Load, activate!
     showTab("media");
     // also, some old content without images
     await Promise.all([load("newsletter-2017-10", "newsletters/2017-10.html"),
                        load("newsletter-2017-11", "newsletters/2017-11.html")]);
     showTab("newsletters");
+  }
+
+  function handleNewslettersSplashDiv() {
+    // There is a special recent news div in the newsletters tab.
+    let splashSrc = document.querySelector('#splash_src');
+    let splashExpires = Date.parse(
+      splashSrc.attributes.getNamedItem('data-expires').value);
+    let splashExpired = (Date.now() - splashExpires) >= 0;
+    if (!splashExpired) {
+      splashSrc.style.display = '';
+      document.querySelector('#splash_dest').innerHTML = splashSrc.innerHTML;
+    }
   }
 
   async function setupAboveFoldContent() {
