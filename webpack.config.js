@@ -11,11 +11,22 @@ module.exports = {
   module: {
     rules: [
         {
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                'css-loader'
-            ]
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader"
+          ]
         },
         {
           test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -42,9 +53,6 @@ module.exports = {
   // see https://www.npmjs.com/package/bootstrap-loader#user-content-bootstrap-4-internal-dependency-solution
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
       Tether: "tether",
       "window.Tether": "tether",
       // NOTE: Popper is needed if we use any of Tooltip, Popover, or Dropdown

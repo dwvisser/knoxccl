@@ -1,6 +1,5 @@
-import $ from "jquery";
-import "popper.js";
-require("bootstrap-loader");
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "@popperjs/core";
 require("bootstrap-icons/font/bootstrap-icons.css");
 
 if ("customElements" in window) {
@@ -8,11 +7,11 @@ if ("customElements" in window) {
 }
 
 require("lazyload");
-require("./main.css");
+require("./main.scss");
 
 const tuesdays = require('./tuesdays');
 
-$(function() {
+document.addEventListener('DOMContentLoaded', function() {
   async function load(id, url) {
     const response = await fetch(url);
     const body = await response.text();
@@ -58,16 +57,19 @@ $(function() {
     await load("home", "home.html");
     const options = {year: "numeric", month: "long", day: "numeric"};
     const t3 = tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
-    $('#next-meeting-date').text(t3);
-    $("body").on("click", ".switch", function() {
-      const match = $(this)
-        .attr("class")
-        .match(/to-tab-(\w+)/);
-      if (match !== null && match.length > 1) {
-        const tab = match[1];
-        $('.nav-tabs a[href="#' + tab + '"]').tab("show");
-      }
-    });
+    document.querySelector('#next-meeting-date').textContent = t3;
+    // $('#next-meeting-date').text(t3);
+
+    // *** TODO get this working again without jQuery ***
+    // $("body").on("click", ".switch", function() {
+    //   const match = $(this)
+    //     .attr("class")
+    //     .match(/to-tab-(\w+)/);
+    //   if (match !== null && match.length > 1) {
+    //     const tab = match[1];
+    //     $('.nav-tabs a[href="#' + tab + '"]').tab("show");
+    //   }
+    // });
     await loadAboutSection();
   }
 
@@ -94,8 +96,6 @@ $(function() {
 
   async function loadAboutSection() {
       await load("about", "about.html");
-      $('#jq-version').text($.fn.jquery);
-      $('#bs-version').text($.fn.tab.Constructor.VERSION);
   }
 
   function showTab(tab_id) {
