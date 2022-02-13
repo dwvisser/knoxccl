@@ -1,18 +1,16 @@
-import $ from "jquery";
-import "popper.js";
-require("bootstrap-loader");
-require("bootstrap-icons/font/bootstrap-icons.css");
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "@popperjs/core";
 
 if ("customElements" in window) {
   require("dark-mode-toggle");
 }
 
 require("lazyload");
-require("./main.css");
+require("./main.scss");
 
 const tuesdays = require('./tuesdays');
 
-$(function() {
+document.addEventListener('DOMContentLoaded', function() {
   async function load(id, url) {
     const response = await fetch(url);
     const body = await response.text();
@@ -57,16 +55,27 @@ $(function() {
     setUpDarkModeToggle();
     await load("home", "home.html");
     const options = {year: "numeric", month: "long", day: "numeric"};
-    const t3 = tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
-    $('#next-meeting-date').text(t3);
-    $("body").on("click", ".switch", function() {
-      const match = $(this)
-        .attr("class")
-        .match(/to-tab-(\w+)/);
-      if (match !== null && match.length > 1) {
-        const tab = match[1];
-        $('.nav-tabs a[href="#' + tab + '"]').tab("show");
-      }
+    document.querySelector('#next-meeting-date').textContent =
+      tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
+    const content = document.querySelector("#content-for-tabs");
+    content.addEventListener("click", function(e) {
+      var target = e.target;
+        if (!target) { return; }  // if element doesn't exist
+        if (target.classList.contains('switch')) {
+          target.classList.forEach(function(value, key, listObj) {
+            const found = value.match(/to-tab-(?<tab>\w+)/);
+            if (found !== null) {
+              const clickEvent = new MouseEvent("click", {
+                "view": window,
+                "bubbles": true,
+                "cancelable": false
+              });
+              document.querySelector(
+                '.nav-tabs button[data-bs-target="#' + found.groups.tab + '"]')
+                .dispatchEvent(clickEvent);
+            }
+          });
+        }
     });
     await loadAboutSection();
   }
@@ -94,8 +103,6 @@ $(function() {
 
   async function loadAboutSection() {
       await load("about", "about.html");
-      $('#jq-version').text($.fn.jquery);
-      $('#bs-version').text($.fn.tab.Constructor.VERSION);
   }
 
   function showTab(tab_id) {

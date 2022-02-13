@@ -11,40 +11,52 @@ module.exports = {
   module: {
     rules: [
         {
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                'css-loader'
-            ]
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
         },
         {
-          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          include: path.resolve(__dirname, './node_modules/bootstrap-icons/font/fonts'),
-          use: {
-              loader: 'file-loader',
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            {
+              // Run postcss actions
+              loader: 'postcss-loader',
               options: {
-                  name: '[name].[ext]',
-                  outputPath: 'webfonts',
-                  publicPath: '../webfonts',
-              },
-          }
+                // `postcssOptions` is needed for postcss 8.x;
+                // if you use postcss 7.x skip the key
+                postcssOptions: {
+                  // postcss plugins, can be exported to postcss.config.js
+                  plugins: function () {
+                    return [
+                      require('autoprefixer')
+                    ];
+                  }
+                }
+              }
+            },
+            // Compiles Sass to CSS
+            "sass-loader"
+          ]
         },
         {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: "file-loader"
+            type: "asset/resource"
         },
         {
             test: /\.(png|svg|jpg|gif)$/,
-            loader: 'file-loader'
+            type: 'asset/resource'
         }
     ]
   },
   // see https://www.npmjs.com/package/bootstrap-loader#user-content-bootstrap-4-internal-dependency-solution
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
       Tether: "tether",
       "window.Tether": "tether",
       // NOTE: Popper is needed if we use any of Tooltip, Popover, or Dropdown
