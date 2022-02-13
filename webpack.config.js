@@ -46,11 +46,11 @@ module.exports = {
         },
         {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: "file-loader"
+            type: "asset/resource"
         },
         {
             test: /\.(png|svg|jpg|gif)$/,
-            loader: 'file-loader'
+            type: 'asset/resource'
         }
     ]
   },
