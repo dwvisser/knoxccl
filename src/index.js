@@ -1,6 +1,5 @@
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@popperjs/core";
-require("bootstrap-icons/font/bootstrap-icons.css");
 
 if ("customElements" in window) {
   require("dark-mode-toggle");

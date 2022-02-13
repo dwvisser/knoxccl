@@ -45,18 +45,6 @@ module.exports = {
           ]
         },
         {
-          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          include: path.resolve(__dirname, './node_modules/bootstrap-icons/font/fonts'),
-          use: {
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: 'webfonts',
-                  publicPath: '../webfonts',
-              },
-          }
-        },
-        {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "file-loader"
         },
