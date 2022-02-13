@@ -14,7 +14,36 @@ GitHub Pages infrastructure.
 During development `npm start`, will keep a development server running which automatically
 reloads whenever changes are saved to the code and markup.
 
-## Development Guide
+## Development
+
+### Setup
+
+1. Install a recent enough version of [Node.js](https://nodejs.org/) that comes
+   with [NPM](https://www.npmjs.com/) bundled. It should be at least the version
+   I am using, which is v12.22.5.
+2. After cloning this repository, run the following command:
+
+   ```shell
+   npm ci
+   ```
+
+3. In my Linux environment, I also need to run the additional following command
+   before I can successfully build (thanks to [StackOverflow](https://stackoverflow.com/questions/56348824/error-enoent-no-such-file-or-directory-scandir-node-modules-node-sass-ve)):
+
+   ```shell
+   node node_modules/node-sass/scripts/install.js
+   ```
+
+4. The next two commands will build and serve up a local version of the site:
+
+   ```shell
+   npm run build
+   npm run serve
+   ```
+
+Further details are given in the next subsection.
+
+### Guide
 
 [NPM](https://docs.npmjs.com/about-npm/) and [WebPack](https://webpack.js.org) are used to
 bundle JavaScript and CSS libraries for the page. There are several `npm run` targets at your
