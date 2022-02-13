@@ -56,20 +56,28 @@ document.addEventListener('DOMContentLoaded', function() {
     setUpDarkModeToggle();
     await load("home", "home.html");
     const options = {year: "numeric", month: "long", day: "numeric"};
-    const t3 = tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
-    document.querySelector('#next-meeting-date').textContent = t3;
-    // $('#next-meeting-date').text(t3);
-
-    // *** TODO get this working again without jQuery ***
-    // $("body").on("click", ".switch", function() {
-    //   const match = $(this)
-    //     .attr("class")
-    //     .match(/to-tab-(\w+)/);
-    //   if (match !== null && match.length > 1) {
-    //     const tab = match[1];
-    //     $('.nav-tabs a[href="#' + tab + '"]').tab("show");
-    //   }
-    // });
+    document.querySelector('#next-meeting-date').textContent =
+      tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
+    const content = document.querySelector("#content-for-tabs");
+    content.addEventListener("click", function(e) {
+      var target = e.target;
+        if (!target) { return; }  // if element doesn't exist
+        if (target.classList.contains('switch')) {
+          target.classList.forEach(function(value, key, listObj) {
+            const found = value.match(/to-tab-(?<tab>\w+)/);
+            if (found !== null) {
+              const clickEvent = new MouseEvent("click", {
+                "view": window,
+                "bubbles": true,
+                "cancelable": false
+              });
+              document.querySelector(
+                '.nav-tabs button[data-bs-target="#' + found.groups.tab + '"]')
+                .dispatchEvent(clickEvent);
+            }
+          });
+        }
+    });
     await loadAboutSection();
   }
 
