@@ -7,6 +7,7 @@ if ("customElements" in window) {
 
 require("lazyload");
 require("./main.scss");
+require("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
 const tuesdays = require('./tuesdays');
 
