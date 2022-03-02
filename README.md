@@ -90,6 +90,16 @@ In addition, these folders are generated when building the site and are `.gitign
 * `dist/` - Where WebPack builds the working static site.
 * `node_modules/` - Where all NPM dependences are placed
 
+### How to Promote a Current Announcement Visually
+
+In [newsletters.html](static/newsletters.html), there should be a single div element at
+the top with the `id` attribute set to "splash_src". It also needs a `data-expires` attribute set
+to an expiration date in YYYY-MM-DD format, and an initial `style` attribute of "display:none".
+The JavaScript code will copy the div contents to the top of the Home tab, and make sure it displays on
+the Newsletters tab as well. Once the expiration date is passed, it will stay invisible, and not be copied
+to the Home tab. IMPORTANT: The `id` attribute is supposed to be unique on the page, so make sure to remove
+it from any previous announcements.
+
 ### Local Build and Test
 
 Before creating a pull request, make sure to create a production build, and serve it locally,
