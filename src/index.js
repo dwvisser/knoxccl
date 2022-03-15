@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "cancelable": false
               });
               document.querySelector(
-                '.nav-tabs button[data-bs-target="#' + found.groups.tab + '"]')
+                '#tabs-list button[data-bs-target="#' + found.groups.tab + '"]')
                 .dispatchEvent(clickEvent);
             }
           });
