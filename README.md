@@ -128,9 +128,7 @@ redeployed/updated.
 
 ## To Publicize Significant Site Changes…
 
-Make sure to update (or have someone else update) in these other places, too, where
+Make sure to update (or have someone else update), where
 appropriate.
 
 * [Facebook](https://www.facebook.com/Citizens-Climate-Lobby-Knoxville-Chapter-159872501112806/)
-* [Google Calendar](https://calendar.google.com/calendar?cid=NWtnc2w2aGl0OG4wMDJraGd0bTVpaW9wazBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-* [Google Group](https://groups.google.com/forum/#!forum/knoxccl)
