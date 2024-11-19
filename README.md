@@ -20,7 +20,7 @@ reloads whenever changes are saved to the code and markup.
 
 1. Install a recent enough version of [Node.js](https://nodejs.org/) that comes
    with [NPM](https://www.npmjs.com/) bundled. It should be at least the version
-   I am using, which is v12.22.5.
+   I am using, which is v22.11.0.
 2. After cloning this repository, run the following command:
 
    ```shell
