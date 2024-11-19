@@ -27,14 +27,7 @@ reloads whenever changes are saved to the code and markup.
    npm ci
    ```
 
-3. In my Linux environment, I also need to run the additional following command
-   before I can successfully build (thanks to [StackOverflow](https://stackoverflow.com/questions/56348824/error-enoent-no-such-file-or-directory-scandir-node-modules-node-sass-ve)):
-
-   ```shell
-   node node_modules/node-sass/scripts/install.js
-   ```
-
-4. The next two commands will build and serve up a local version of the site:
+3. The next two commands will build and serve up a local version of the site:
 
    ```shell
    npm run build
