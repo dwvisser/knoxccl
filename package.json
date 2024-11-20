@@ -6,7 +6,7 @@
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/knoxccl.org"
+        "url": "git@github.com:dwvisser/knoxccl.git"
     },
     "license": "CC-BY-NC-ND-4.0",
     "scripts": {
@@ -29,7 +29,6 @@
         "style-loader": "^3.3.1",
         "webpack": "^5.94.0",
         "webpack-cli": "^4.9.2",
-        "webpack-dev-server": "^4.7.4",
         "workbox-webpack-plugin": "^6.5.3"
     },
     "dependencies": {
