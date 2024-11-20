@@ -5,28 +5,24 @@ website at [knoxccl.org](http://knoxccl.org).
 
 ## Contributing
 
-In general, work in feature branches in your own fork. When you are satisfied with your
-changes, create a pull request requesting to merge to `master` on
+In general, work in feature branches in your own fork. When you are satisfied
+with your changes, create a pull request requesting to merge to `master` on
 [https://github.com/dwvisser/knoxccl](dwvisser/knoxccl). When the pull request
-is accepted and merged, a new version of the website is automatically built and deployed on
-GitHub Pages infrastructure.
-
-During development `npm start`, will keep a development server running which automatically
-reloads whenever changes are saved to the code and markup.
+is accepted and merged, a new version of the website is automatically built and
+deployed on GitHub Pages infrastructure.
 
 ## Development
 
 ### Setup
 
-1. Install a recent enough version of [Node.js](https://nodejs.org/) that comes
-   with [NPM](https://www.npmjs.com/) bundled. It should be at least the version
-   I am using, which is v22.11.0.
-2. After cloning this repository, run the following command:
-
-   ```shell
-   npm ci
-   ```
-
+1. Install [Node](https://nodejs.org/) v22. I like to use
+   [fnm](https://fnm.vercel.app/) to accomplish this. If fnm is properly
+   initialized in your shell environment, simply changing your working
+   directory to the project root will result in fnm offering to install the
+   correct version of Node, and setting your `PATH` to use it.
+2. In the project root directory, run `npm ci` to install the environment
+   specified in [package.json](package.json) and
+   [package-lock.json](package-lock.json).
 3. The next two commands will build and serve up a local version of the site:
 
    ```shell
@@ -38,50 +34,44 @@ Further details are given in the next subsection.
 
 ### Guide
 
-[NPM](https://docs.npmjs.com/about-npm/) and [WebPack](https://webpack.js.org) are used to
-bundle JavaScript and CSS libraries for the page. There are several `npm run` targets at your
-disposal:
+[NPM](https://docs.npmjs.com/about-npm/) and [WebPack](https://webpack.js.org)
+are used to bundle JavaScript and CSS libraries for the page. There are several
+`npm run` targets at your disposal:
 
-* clean - Removes the `dist` build folder and its contents.
-* develop - Build JS/CSS, including service-worker.js, with fewer optimizations for easier
-  debugging.
-* build - Same as 'develop', but optimizing for deployment.
-* deploy - Prints a message about how to deploy. We're using AWS Amplify, pointed at the
-  `master` branch on AWS CodeCommit, so any push to that branch results in a build in AWS,
-  with deploy to the Amplify CDN upon successful build.
-* serve - Launches a local static content web server from the `dist/` folder.
-
-There are also these additional targets:
-
-* start - launches the WebPack dev server for local browsing/testing
-* watch - invokes `webpack --watch` for automatic rebuilding during editing
-
-WARNING: `npm run start` and `npm run watch` aren't yet trustworthy. They don't appear to do
-the Workbox step. At present, I trust explicit `npm run build` or `npm run develop` followed by
-`npm run serve`, which is a more trustworthy test of the website as it will be served from AWS.
+* `clean` - Removes the *dist* build folder and its contents.
+* `develop` - Build JS/CSS, including service-worker.js, with fewer optimizations
+  for easier debugging.
+* `build` - Same as 'develop', but optimizing for deployment.
+* `serve` - Launches a local static content web server from the *dist* folder.
 
 ### Source Structure
 
-* `.booststraprc` - Used to configure `bootstrap-loader` and include only what is needed by the
-  site
-* `.github/workflows/main.yml` - Specifies the GitHub Actions workflow for building the site.
-* `.gitignore` - What files and folders Git should ignore.
-* `package.json` - NPM dependencies, see
+* *.booststraprc* - Used to configure `bootstrap-loader` and include only what
+  is needed by the site
+* *.github/workflows/main.yml* - Specifies the GitHub Actions workflow for
+  building the site.
+* *.gitignore* - What files and folders Git should ignore.
+* *package.json* - NPM dependencies, see
   [docs.npmjs.com](https://docs.npmjs.com/creating-a-package-json-file)
-* `package-lock.json` - describes exact dependency installations at a point in time; see
-  [docs.npmjs.com](https://docs.npmjs.com/files/package-lock.json)
-* `postcss.config.js` - seems to be necessary for CSS loader, initially set to empty config
-* `README.md` - this file
-* `serve.sh` - Helpful script for launching a static HTTP server for local testing
-* `src/` - Files that are processed by WebPack build processes to generate output in `dist/`.
-* `src/index.js` - The WebPack entry point
-* `static/` - Static content files that get copied, unmodified, by WebPack into dist.
-* `webpack.config.js` - Defines the WebPack build process
+* *package-lock.json* - describes exact dependency installations at a point in
+  time; see [docs.npmjs.com](https://docs.npmjs.com/files/package-lock.json)
+* *postcss.config.js* - seems to be necessary for CSS loader, initially set to
+  empty config
+* *README.md* - this file
+* *serve.sh* - Helpful script for launching a static HTTP server for local
+  testing
+* *src/* - Files that are processed by WebPack build processes to generate
+  output in *dist/*.
+* *src/index.js* - The WebPack entry point
+* *static/* - Static content files that get copied, unmodified, by WebPack into
+  *dist*.
+* *webpack.config.js* - Defines the WebPack build process
 
-In addition, these folders are generated when building the site and are `.gitignore`'d:
+In addition, these folders are generated when building the site and are
+*.gitignore*'d:
 
-* `dist/` - Where WebPack builds the working static site.
-* `node_modules/` - Where all NPM dependences are placed
+* *dist/* - Where WebPack builds the working static site.
+* *node_modules/* - Where all NPM dependences are placed
 
 ### How to Promote a Current Announcement Visually
 
@@ -97,31 +87,36 @@ previous announcements.
 
 ### Local Build and Test
 
-Before creating a pull request, make sure to create a production build, and serve it locally,
-as a final sanity check.
+Before creating a pull request, make sure to create a production build, and
+serve it locally, as a final sanity check.
 
-    > npm run clean
-    > npm run build
+```shell
+npm run clean
+npm run build
+```
 
-The `dist` build folder will be removed by the first command, and re-built by the second
-command. You can then test the built version of the site with:
+The *dist* build folder will be removed by the first command, and re-built by
+the second command. You can then test the built version of the site with:
 
-    > npm run serve
+```shell
+npm run serve
+```
 
-The above command depends on having Python 3 installed (most Linux distributions do). If the
-site is ready for deployment, commit the changes to Git.
+The above command depends on having Python 3 installed (most Linux distributions
+do). If the site is ready for deployment, commit the changes to Git.
 
-    > git add […]
-    > git commit
-    > git push
+```shell
+git add […]
+git commit
+git push
+```
 
-Remember, while it is good to "backup" by pushing `develop` and feature branches,
-only pushes to the `master` branch on the main repository will result in the website being
-redeployed/updated.
+Remember, while it is good to "backup" by pushing `develop` and feature
+branches, only pushes to the `master` branch on the main repository will result
+in the website being redeployed/updated.
 
 ## To Publicize Significant Site Changes…
 
-Make sure to update (or have someone else update), where
-appropriate.
+Make sure to update (or have someone else update), where appropriate.
 
 * [Facebook](https://www.facebook.com/Citizens-Climate-Lobby-Knoxville-Chapter-159872501112806/)

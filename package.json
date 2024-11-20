@@ -13,10 +13,7 @@
         "clean": "cd `git rev-parse --show-toplevel` && rm -rf dist",
         "develop": "webpack --mode=development",
         "build": "webpack --mode=production",
-        "deploy": "echo 'To deploy, push to the 'master' branch in AWS CodeCommit.'",
-        "serve": "./serve.sh",
-        "start:dev": "webpack serve",
-        "watch": "webpack --watch"
+        "serve": "./serve.sh"
     },
     "devDependencies": {
         "bootstrap-icons": "^1.8.1",
