@@ -9,7 +9,7 @@ require("lazyload");
 require("./main.scss");
 require("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
-const tuesdays = require('./tuesdays');
+const weekdays = require('./weekdays');
 
 document.addEventListener('DOMContentLoaded', function() {
   async function load(id, url) {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     await load("home", "home.html");
     const options = {year: "numeric", month: "long", day: "numeric"};
     document.querySelector('#next-meeting-date').textContent =
-      tuesdays.nextThirdTuesday().toLocaleDateString('en-US', options);
+      weekdays.nextThirdWednesday().toLocaleDateString('en-US', options);
     const content = document.querySelector("#content-for-tabs");
     content.addEventListener("click", function(e) {
       var target = e.target;
