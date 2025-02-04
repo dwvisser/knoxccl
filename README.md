@@ -15,7 +15,7 @@ deployed on GitHub Pages infrastructure.
 
 This site's interface is powered by the following:
 
-* [Bootstrap](https://getbootstrap.com/) target=_blank rel=noreferrer>Bootstrap</a>,
+* [Bootstrap](https://getbootstrap.com/)
 * [Bootstrap Icons](https://icons.getbootstrap.com/)
 * [Lazyload](https://github.com/tuupola/lazyload#readme)
 * [Popper.js](https://popper.js.org/)
