@@ -18,13 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById(id).innerHTML = body;
   }
 
-  async function loadMeetingsTab() {
-    await load("meetings", "meetings.html");
-    await Promise.all([load("agenda-2017-10", "agendas/2017-10.html"),
-                       load("agenda-2017-11", "agendas/2017-11.html")]);
-    showTab("meetings");
-  }
-
   async function loadNewslettersAndMediaTabs() {
     // don't bother start loading this until now, but can be async
     import("lite-vimeo-embed");
@@ -117,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   async function loadRestOfTabs() {
     loadAndShowTab("calendar", "calendar.html");
-    loadMeetingsTab();
     loadNewslettersAndMediaTabs();
     loadAndShowTab("social", "social.html");
   }

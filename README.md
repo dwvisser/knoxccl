@@ -13,6 +13,16 @@ deployed on GitHub Pages infrastructure.
 
 ## Development
 
+This site's interface is powered by the following:
+
+* [Bootstrap](https://getbootstrap.com/) target=_blank rel=noreferrer>Bootstrap</a>,
+* [Bootstrap Icons](https://icons.getbootstrap.com/)
+* [Lazyload](https://github.com/tuupola/lazyload#readme)
+* [Popper.js](https://popper.js.org/)
+* [Dark-Mode-Toggle](https://github.com/googlechromelabs/dark-mode-toggle#readme)
+* [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) functionality
+  is implemented using [Workbox](https://developers.google.com/web/tools/workbox)
+
 ### Setup
 
 1. Install [Node](https://nodejs.org/) v22. I like to use
