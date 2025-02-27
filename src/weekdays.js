@@ -41,7 +41,7 @@ function nextNthSpecificWeekday(n, desired_weekday) {
   const month = today.getMonth();
   currentMonthNthSpecificWeekday = nthSpecificWeekday(n, year, month, desired_weekday);
   return today <= currentMonthNthSpecificWeekday ? currentMonthNthSpecificWeekday :
-    nextMonthNthSpecificWeekday(year, year, month, desired_weekday);
+    nextMonthNthSpecificWeekday(n, year, month, desired_weekday);
 }
 
 function nextThirdTuesday() {
