@@ -1,7 +1,7 @@
 // const Sunday = 0
 // const Monday = 1
-const Tuesday = 2
-const Wednesday = 3
+const Tuesday = 2;
+const Wednesday = 3;
 // const Thurday = 4
 // const Friday = 5
 // const Saturday = 6
@@ -22,10 +22,19 @@ function todayMidnight() {
 }
 
 function nthSpecificWeekday(n, year, month, desired_weekday) {
-  return new Date(year, month, firstSpecificWeekdayOfMonth(year, month, desired_weekday) + (n - 1) * 7)
+  return new Date(
+    year,
+    month,
+    firstSpecificWeekdayOfMonth(year, month, desired_weekday) + (n - 1) * 7
+  );
 }
 
-function nextMonthNthSpecificWeekday(n, this_year, this_month, desired_weekday) {
+function nextMonthNthSpecificWeekday(
+  n,
+  this_year,
+  this_month,
+  desired_weekday
+) {
   const before_december = this_month < 11;
   const nextMonthYear = before_december ? this_year : this_year + 1;
   const nextMonth = before_december ? this_month + 1 : 0;
@@ -39,19 +48,25 @@ function nextNthSpecificWeekday(n, desired_weekday) {
   const today = todayMidnight();
   const year = today.getFullYear();
   const month = today.getMonth();
-  currentMonthNthSpecificWeekday = nthSpecificWeekday(n, year, month, desired_weekday);
-  return today <= currentMonthNthSpecificWeekday ? currentMonthNthSpecificWeekday :
-    nextMonthNthSpecificWeekday(n, year, month, desired_weekday);
+  const currentMonthNthSpecificWeekday = nthSpecificWeekday(
+    n,
+    year,
+    month,
+    desired_weekday
+  );
+  return today <= currentMonthNthSpecificWeekday
+    ? currentMonthNthSpecificWeekday
+    : nextMonthNthSpecificWeekday(n, year, month, desired_weekday);
 }
 
 function nextThirdTuesday() {
   const third = 3;
-  return nextNthSpecificWeekday(third, Tuesday)
+  return nextNthSpecificWeekday(third, Tuesday);
 }
 
 function nextThirdWednesday() {
   const third = 3;
-  return nextNthSpecificWeekday(third, Wednesday)
+  return nextNthSpecificWeekday(third, Wednesday);
 }
 
 exports.nextThirdTuesday = nextThirdTuesday;
