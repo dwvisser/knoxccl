@@ -4,8 +4,16 @@ const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    clean: true,
+  },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     port: 3000
   },
   module: {
@@ -25,35 +33,19 @@ module.exports = {
             // Translates CSS into CommonJS
             "css-loader",
             {
-              // Run postcss actions
+              // Run postcss actions (config in postcss.config.js)
               loader: 'postcss-loader',
-              options: {
-                // `postcssOptions` is needed for postcss 8.x;
-                // if you use postcss 7.x skip the key
-                postcssOptions: {
-                  // postcss plugins, can be exported to postcss.config.js
-                  plugins: function () {
-                    return [
-                      require('autoprefixer')
-                    ];
-                  }
-                }
-              }
             },
             // Compiles Sass to CSS
             "sass-loader"
           ]
         },
         {
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            type: "asset/resource"
-        },
-        {
-            test: /\.(png|svg|jpg|gif)$/,
-            type: 'asset/resource'
-        },
-        {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.(png|svg|jpg|gif|jpeg)$/,
           type: 'asset/resource',
         }
     ]
