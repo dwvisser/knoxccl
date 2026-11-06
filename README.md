@@ -8,8 +8,9 @@ website at [knoxccl.org](http://knoxccl.org).
 In general, work in feature branches in your own fork. When you are satisfied
 with your changes, create a pull request requesting to merge to `master` on
 [https://github.com/dwvisser/knoxccl](dwvisser/knoxccl). When the pull request
-is accepted and merged, a new version of the website is automatically built and
-deployed on GitHub Pages infrastructure.
+is accepted and merged, GitHub Actions builds the site and deploys it to GitHub
+Pages. In the repository settings under **Pages**, the build and deployment
+source must be set to **GitHub Actions**.
 
 ## Development
 
