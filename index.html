@@ -152,24 +152,6 @@
   </div> <!-- end main-row -->
 </div>  <!-- end #main-container -->
 
-<script>
-  (function(){
-    if('serviceWorker' in navigator) {
-        window.addEventListener('load', function(){
-          navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
-          .then(function(registration) {
-                console.log('Service Worker Registered');
-          });
-          navigator.serviceWorker.ready.then(function(registration) {
-            console.log('Service Worker Ready');
-          });
-          navigator.serviceWorker.addEventListener('controllerchange',
-            function() { window.location.reload(); }
-          );
-        })
-    }
-  })();
-</script>
 <script src=main.js></script>
 </body>
 </html>
