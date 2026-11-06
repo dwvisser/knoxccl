@@ -20,8 +20,10 @@ This site's interface is powered by the following:
 * [Lazyload](https://github.com/tuupola/lazyload#readme)
 * [Popper.js](https://popper.js.org/)
 * [Dark-Mode-Toggle](https://github.com/googlechromelabs/dark-mode-toggle#readme)
-* [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) functionality
-  is implemented using [Workbox](https://developers.google.com/web/tools/workbox)
+
+The site no longer registers a service worker. The static
+[`service-worker.js`](static/service-worker.js) is retained to remove caches and
+registrations left by previously installed Workbox service workers.
 
 ### Setup
 
@@ -49,8 +51,7 @@ are used to bundle JavaScript and CSS libraries for the page. There are several
 `npm run` targets at your disposal:
 
 * `clean` - Removes the *dist* build folder and its contents.
-* `develop` - Build JS/CSS, including service-worker.js, with fewer optimizations
-  for easier debugging.
+* `develop` - Build JS/CSS with fewer optimizations for easier debugging.
 * `build` - Same as 'develop', but optimizing for deployment.
 * `serve` - Launches a local static content web server from the *dist* folder.
 
@@ -73,6 +74,8 @@ are used to bundle JavaScript and CSS libraries for the page. There are several
 * *src/* - Files that are processed by WebPack build processes to generate
   output in *dist/*.
 * *src/index.js* - The WebPack entry point
+* *static/service-worker.js* - One-time cleanup for clients with the former
+  Workbox service worker; keep it available at the site root.
 * *static/* - Static content files that get copied, unmodified, by WebPack into
   *dist*.
 * *webpack.config.js* - Defines the WebPack build process

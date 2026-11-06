@@ -1,6 +1,5 @@
 .datignore
 dat.json
 node_modules
-service-worker.js
 dist/
 .vscode/
